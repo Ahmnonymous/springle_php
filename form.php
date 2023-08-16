@@ -43,56 +43,56 @@ if(isset($_SESSION['auth']))
     <h2 class="title text-center">Add Sale Details</h2>  
     <div class="row">
         <div class="form-field col-sm-4 mx-auto">
-          <input id="customer_id" name="customer_id" class="input-text js-input form-control shadow-none rounded-0" type="text" required>
-          <label class="label" for="customer_id">Cus ID</label>
+          <input id="customer_id" name="customer_id" placeholder="Customer ID" class="input-text js-input form-control shadow-none rounded-0" type="text" required>
+          <!--label class="label" for="customer_id">Cus ID</label-->
         </div>
         <div class="form-field col-sm-4 mx-auto">
-          <input id="name" name="customers_name" class="input-text js-input form-control shadow-none rounded-0" type="text" required>
-          <label class="label" for="name">Customer's Name</label>
+          <input id="name" name="customers_name" placeholder="Customer Name" class="input-text js-input form-control shadow-none rounded-0" type="text" required>
+          <!--label class="label" for="name">Customer's Name</label-->
         </div>
       </div>
       <div class="row">
           
           <div class="form-field col-sm-4 mx-auto">
-          <input id="rate" name="rate" class="input-text js-input form-control shadow-none rounded-0" type="number" required>
-          <label class="label" for="rate">Rate</label>
+          <input id="rate" name="rate" placeholder="Rate" class="input-text js-input form-control shadow-none rounded-0" type="number" required>
+          <!--label class="label" for="rate">Rate</label-->
         </div>
         
         <div class="form-field col-sm-4 mx-auto">
-          <input id="quantity" name="quantity" class="input-text js-input form-control shadow-none rounded-0" type="number" required>
-          <label class="label" for="quantity">Quantity</label>
+          <input id="quantity" name="quantity" placeholder="Quantity" class="input-text js-input form-control shadow-none rounded-0" type="number" required>
+          <!--label class="label" for="quantity">Quantity</label-->
         </div>
       </div>
       <div class="row">
        <div class="form-field col-sm-4 mx-auto">
-          <input id="BotRecord" name="bot_rec" class="input-text js-input form-control shadow-none rounded-0" type="number" required>
-          <label class="label" for="BotRecord">Bot Record</label>
+          <input id="BotRecord" name="bot_rec" placeholder="Bot Record" class="input-text js-input form-control shadow-none rounded-0" type="number" required>
+          <!--label class="label" for="BotRecord">Bot Record</label-->
         </div>
         
         <div class="form-field col-sm-4 mx-auto">
-          <input id="bottle_balance" name="bottle_balance" class="input-text js-input form-control shadow-none rounded-0" type="number" required>
-          <label class="label" for="bottle_balance">Bot Balance</label>
+          <input id="bottle_balance" name="bottle_balance" placeholder="Bot Balance" class="input-text js-input form-control shadow-none rounded-0" type="number" required>
+          <!--label class="label" for="bottle_balance">Bot Balance</label-->
         </div>
       </div>
       <div class="row">
         <div class="form-field col-sm-4 mx-auto">
-          <input id="amount" name="amount" class="input-text js-input form-control shadow-none bg-white rounded-0" type="text" disabled required>
-          <label class="label" for="amount" style="top: -19px">Amount</label>
+          <input id="amount" name="amount" placeholder="Amount" class="input-text js-input form-control shadow-none bg-white rounded-0" type="text" disabled required>
+          <!--label class="label" for="amount" style="top: -19px">Amount</label-->
         </div>
         <div class="form-field col-sm-4 mx-auto">
-          <input id="payReceived" name="pay_received" class="input-text js-input form-control shadow-none" type="number" required>
-          <label class="label" for="payReceived">Pay Received</label>
+          <input id="payReceived" name="pay_received" placeholder="Payment Received" class="input-text js-input form-control shadow-none" type="number" required>
+          <!--label class="label" for="payReceived">Pay Received</label-->
         </div>
       </div>
       <div class="row">
            <div class="form-field col-sm-4 mx-auto">
-          <input id="BotRecord" name="bot_rec" class="input-text js-input form-control shadow-none rounded-0" type="number" required>
-          <label class="label" for="BotRecord">Pay Balance</label>
+          <input id="BotRecord" name="bot_rec" placeholder="Bot Received" class="input-text js-input form-control shadow-none rounded-0" type="number" required>
+          <!--label class="label" for="BotRecord">Pay Balance</label-->
         </div>
         
            <div class="form-field col-sm-4 mx-auto">
-          <input id="mobile" name="contact" class="input-text js-input form-control shadow-none" type="text" required>
-          <label class="label" for="mobile">Contact</label>
+          <input id="mobile" name="contact" placeholder="Contact" class="input-text js-input form-control shadow-none" type="text" required>
+          <!--label class="label" for="mobile">Contact</label-->
         </div>
       </div>
       <div class="row">
@@ -100,8 +100,8 @@ if(isset($_SESSION['auth']))
         $formattedDate = date('Y-m-d');
         ?>
         <div class="form-field col-sm-4 mx-auto">
-          <input id="date" name="date" value="<?php echo $formattedDate; ?>" class="input-text js-input form-control shadow-none bg-white rounded-0" type="text" disabled required>
-          <label class="label" for="date" style="top: -19px">Date</label>
+          <input id="date" name="date" placeholder="Date" value="<?php echo $formattedDate; ?>" class="input-text js-input form-control shadow-none bg-white rounded-0" type="text" disabled required>
+          <!--label class="label" for="date" style="top: -19px">Date</label-->
         </div>
           <div class="col-sm-4 mx-auto"></div>
       </div>
