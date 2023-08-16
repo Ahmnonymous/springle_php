@@ -27,7 +27,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $date = $_POST["date"];
     $amount = $quantity * $rate;
 
-    $formattedDate = date('Y-m-d', strtotime($date));
+    $formattedDate = date('MM/DD/YYYY', strtotime($date));
 
     // Oracle-specific: Construct the SQL statement
     $sql = "INSERT INTO SALE_DETAIL(book_id,sal_id, customer_name, bot_issue,bottle_recived, rate, amount, bot_balance, pay_recived,pay_balance,to_date) 
