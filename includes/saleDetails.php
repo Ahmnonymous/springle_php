@@ -17,7 +17,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   if ($conn->query($sql) === TRUE) {
     $_SESSION['success_message'] = "Record inserted successfully!";
   } else {
-    $_SESSION['error_message'] = "Error inserting record: " . $conn->error;
+    $_SESSION['error_message'] = "Error inserting record: " . $conn->Error();
   }
 }
 else{
