@@ -1,0 +1,67 @@
+<?php
+putenv('ORACLE_HOME= instantclient_10_2');
+putenv('LD_LIBRARY_PATH= instantclient_10_2');
+
+// Database connection details
+$username = 'HR';
+$password = 'HR';
+$tnsname = 'ORC';
+
+$db = "(DESCRIPTION=(ADDRESS_LIST=(ADDRESS=(PROTOCOL=TCP)(HOST=124.29.225.97)(PORT=1521)))(CONNECT_DATA=(SERVICE_NAME=$tnsname)))";
+
+$conn = oci_connect($username, $password, $db);
+if (!$conn) {
+    $error = oci_error();
+    die("Connection failed: " . $error['message']);
+}
+
+echo "Connected to Oracle Database!";
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $sal_id = $_POST["Sal_id"];
+    $customer_name = $_POST["customers_name"];
+    $quantity = $_POST["quantity"];
+    $bot_rec = $_POST["bot_rec"];
+    $bot_balance = $_POST["bottle_balance"];
+    $pay_received = $_POST["pay_received"];
+    $rate = $_POST["rate"];
+    $contact = $_POST["contact"];
+    $date = $_POST["date"];
+    $amount = $quantity * $rate;
+
+    // Oracle-specific: Construct the SQL statement
+    $sql = "INSERT INTO SALE_DETAIL(sal_id, customers_name, quantity, bot_issue, rate, amount, bot_bal, pay_received) 
+            VALUES (:sal_id, :customer_name, :quantity, :bot_rec, :rate, :amount, :bot_balance, :pay_received)";
+
+    // Prepare the statement
+    $stmt = oci_parse($conn, $sql);
+
+    // Bind the parameters
+    oci_bind_by_name($stmt, ':sal_id', $sal_id);
+    oci_bind_by_name($stmt, ':customer_name', $customer_name);
+    oci_bind_by_name($stmt, ':quantity', $quantity);
+    oci_bind_by_name($stmt, ':bot_rec', $bot_rec);
+    oci_bind_by_name($stmt, ':rate', $rate);
+    oci_bind_by_name($stmt, ':amount', $amount);
+    oci_bind_by_name($stmt, ':bot_balance', $bot_balance);
+    oci_bind_by_name($stmt, ':pay_received', $pay_received);
+
+    // Execute the statement
+    $result = oci_execute($stmt);
+    
+    if ($result) {
+        $_SESSION['success_message'] = "Record inserted successfully!";
+    } else {
+        $error = oci_error($stmt);
+        $_SESSION['error_message'] = "Error inserting record: " . $error['message'];
+    }
+
+    // Free the statement
+    oci_free_statement($stmt);
+} else {
+    echo "Server method is not POST";
+}
+
+oci_close($conn); // Close Oracle connection
+header("Location: ../form.php");
+
+?>
