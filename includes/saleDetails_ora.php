@@ -24,10 +24,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $pay_balance = $_POST["pay_balance"];
     $rate = $_POST["rate"];
     $contact = $_POST["contact"];
-    $date = $_POST["date"];
+  //  $date = $_POST["date"];
     $amount = $quantity * $rate;
 
-    $formattedDate = date('MM/DD/YYYY', strtotime($date));
+//    $formattedDate = date('MM/DD/YYYY', strtotime($date));
 
     // Oracle-specific: Construct the SQL statement
     $sql = "INSERT INTO SALE_DETAIL(book_id,sal_id, customer_name, bot_issue,bottle_recived, rate, amount, bot_balance, pay_recived,pay_balance) 
@@ -48,7 +48,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     oci_bind_by_name($stmt, ':pay_balance', $pay_balance);
     
     // Bind the formatted date to the parameter
-    oci_bind_by_name($stmt, ':to_date', $formattedDate);
+    //oci_bind_by_name($stmt, ':to_date', $formattedDate);
 
     // Execute the statement
     $result = oci_execute($stmt);
