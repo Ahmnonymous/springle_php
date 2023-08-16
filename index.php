@@ -76,14 +76,14 @@
       <h2 class="title text-center">Login</h2>
       <form method="POST" action="includes/login_auth.php" class="custom-form mx-auto mb-5 contact-form shadow">
         <div class="form-field col-sm-12 mx-auto">
-          <input id="email" name="email" class="input-text js-input form-control shadow-none rounded-0" type="email"
+          <input id="email" name="email" placeholder="email" class="input-text js-input form-control shadow-none rounded-0" type="email"
             required>
-          <label class="label" for="email">Email</label>
+          <!--label class="label" for="email">Email</label-->
         </div>
         <div class="form-field col-sm-12 mx-auto">
-          <input id="password" name="password" class="input-text js-input form-control shadow-none rounded-0"
+          <input id="password" name="password" placeholder="password" class="input-text js-input form-control shadow-none rounded-0"
             type="password" required>
-          <label class="label" for="password">Password</label>
+          <!--label class="label" for="password">Password</label-->
         </div>
         <div class="form-field col-sm-12 text-center">
           <input class="submit-btn btn btn-primary" type="submit" value="Login">
