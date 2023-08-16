@@ -14,20 +14,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   //$date = $_POST["date"];
   $amount = $quantity * $rate;
 
-  // Use prepared statements to prevent SQL injection
-  $sql = "INSERT INTO sale_detail (Sal_id, Customers_name, Quantity, Bot_rec, Rate, Amount, Bottle_balance, Pay_received, contact) 
-          VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+  $sql = "INSERT INTO sale_detail (Sal_id, Customers_name, Quantity, Bot_rec, Rate, Amount, Bottle_balance, Pay_received,contact,) 
+          VALUES ('$sal_id', '$customer_name', $quantity, $bot_rec, $rate, $amount, $bot_balance, $pay_received,$contact)";
 
-  $stmt = $conn->prepare($sql);
-  $stmt->bind_param("issiiddiss", $sal_id, $customer_name, $quantity, $bot_rec, $rate, $amount, $bot_balance, $pay_received, $contact);
-
-  if ($stmt->execute()) {
+  if ($conn->query($sql) === TRUE) {
     $_SESSION['success_message'] = "Record inserted successfully!";
   } else {
-    $_SESSION['error_message'] = "Error inserting record: " . $stmt->error;
+    $_SESSION['error_message'] = "Error inserting record: " . $conn->error();
   }
-
-  $stmt->close();
 
 } else {
   echo "Server method is not POST.";
