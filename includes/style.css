@@ -1,6 +1,63 @@
 /* External Stylesheet */
 @import url(https://fonts.googleapis.com/css?family=Raleway:300);
 @import url(https://fonts.googleapis.com/css?family=Lusitana:400,700);
+body {
+  background-color: #f5f4f4;
+}
+
+.container {
+  margin-top: 4rem;
+}
+
+.custom-form {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 2rem;
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.input-text {
+  width: 100%;
+  padding: 0.5rem;
+  border: none;
+  border-bottom: 1px solid #ccc;
+  font-size: 16px;
+}
+
+.label {
+  position: absolute;
+  top: 0.75rem;
+  left: 1rem;
+  font-size: 16px;
+  color: #666;
+  pointer-events: none;
+  transition: 0.2s all;
+}
+
+.input-text:focus ~ .label,
+.input-text.not-empty ~ .label {
+  top: -1rem;
+  font-size: 12px;
+  color: #007bff;
+}
+
+.submit-btn {
+  width: 100%;
+  padding: 0.75rem;
+  background-color: #007bff;
+  border: none;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.submit-btn:hover {
+  background-color: #0056b3;
+}
+
 .align-center {
   text-align: center;
 }
