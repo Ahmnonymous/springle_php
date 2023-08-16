@@ -112,7 +112,7 @@ if(isset($_SESSION['auth']))
 </div>
 <?php }
 else{
-    header("Location:form.php");
+    header("Location:index.php");
 }
 
 ?>
