@@ -36,7 +36,7 @@ session_start();
     <div class="container mt-4">
       <section>
         <h2 class="title text-center">Login</h2>
-        <form method="POST" action="login_auth.php" class="custom-form mx-auto mb-5 contact-form bg-white p-5 shadow">
+        <form method="POST" action="includes/login_auth.php" class="custom-form mx-auto mb-5 contact-form bg-white p-5 shadow">
           <div class="form-field col-sm-4 mx-auto">
             <input id="email" name="email" class="input-text js-input form-control shadow-none rounded-0" type="email" required>
             <label class="label" for="email">Email</label>
