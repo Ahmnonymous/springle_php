@@ -22,14 +22,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $bot_rec = $_POST["bot_rec"];
     $bot_balance = $_POST["bottle_balance"];
     $pay_received = $_POST["pay_received"];
+    $pay_balance = $_POST["pay_balance"];
     $rate = $_POST["rate"];
     $contact = $_POST["contact"];
     $date = $_POST["date"];
     $amount = $quantity * $rate;
 
     // Oracle-specific: Construct the SQL statement
-    $sql = "INSERT INTO SALE_DETAIL(book_id,sal_id, customers_name, quantity, bot_issue, rate, amount, bot_bal, pay_received,to_date) 
-            VALUES (2237,:sal_id, :customer_name, :quantity, :bot_rec, :rate, :amount, :bot_balance, :pay_received,:to_date)";
+    $sql = "INSERT INTO SALE_DETAIL(book_id,sal_id, customer_name, bot_issue,bottle_recived, rate, amount, bot_balance, pay_received,pay_balance,to_date) 
+            VALUES (2237,:sal_id, :customer_name, :quantity, :bot_rec, :rate, :amount, :bot_balance, :pay_received,:pay_balance,:to_date)";
 
     // Prepare the statement
     $stmt = oci_parse($conn, $sql);
@@ -43,6 +44,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     oci_bind_by_name($stmt, ':amount', $amount);
     oci_bind_by_name($stmt, ':bot_balance', $bot_balance);
     oci_bind_by_name($stmt, ':pay_received', $pay_received);
+    oci_bind_by_name($stmt, ':pay_balance', $pay_balance);
     oci_bind_by_name($stmt, ':to_date', $date);
 
     // Execute the statement

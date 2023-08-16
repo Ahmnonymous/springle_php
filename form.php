@@ -86,7 +86,7 @@ if(isset($_SESSION['auth']))
       </div>
       <div class="row">
            <div class="form-field col-sm-4 mx-auto">
-          <input id="BotRecord" name="bot_rec" placeholder="Pay Balance" class="input-text js-input form-control shadow-none rounded-0" type="number" required>
+          <input id="pay_balance" name="pay_balance" placeholder="Pay Balance" class="input-text js-input form-control shadow-none rounded-0" type="number" required>
           <!--label class="label" for="BotRecord">Pay Balance</label-->
         </div>
         
