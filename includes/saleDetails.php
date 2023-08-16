@@ -15,11 +15,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   $amount = $quantity * $rate;
 
   // Use prepared statements to prevent SQL injection
-  $sql = "INSERT INTO sale_detail (Sal_id, Customers_name, Quantity, Bot_rec, Rate, Amount, Bottle_balance, Pay_received, contact, `date`) 
+  $sql = "INSERT INTO sale_detail (Sal_id, Customers_name, Quantity, Bot_rec, Rate, Amount, Bottle_balance, Pay_received, contact) 
           VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
 
   $stmt = $conn->prepare($sql);
-  $stmt->bind_param("issiiddiss", $sal_id, $customer_name, $quantity, $bot_rec, $rate, $amount, $bot_balance, $pay_received, $contact, $date);
+  $stmt->bind_param("issiiddiss", $sal_id, $customer_name, $quantity, $bot_rec, $rate, $amount, $bot_balance, $pay_received, $contact);
 
   if ($stmt->execute()) {
     $_SESSION['success_message'] = "Record inserted successfully!";
