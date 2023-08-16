@@ -1,8 +1,21 @@
 <?php
 session_start();
 
+// Database connection details
+$username = 'HR';
+$password = 'HR';
+$db = '124.29.225.97:1521/orcl'; 
+
+$conn = oci_connect($username, $password, $db);
+if (!$conn) {
+    $error = oci_error();
+    die("Connection failed: " . $error['message']);
+}
+
+echo "Connected to Oracle Database!";
+
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    include_once "db_ora.php"; // Include your Oracle database connection file
+//    include_once "db_ora.php"; // Include your Oracle database connection file
 
     $email = $_POST["email"];
     $password = $_POST["password"];
