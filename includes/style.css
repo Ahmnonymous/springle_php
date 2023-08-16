@@ -2,60 +2,105 @@
 @import url(https://fonts.googleapis.com/css?family=Raleway:300);
 @import url(https://fonts.googleapis.com/css?family=Lusitana:400,700);
 
-body {
-  background-color: #f5f4f4;
+.align-center {
+  text-align: center;
 }
-
-.container {
-  margin-top: 4rem;
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: Lusitana, serif;
 }
-
-.custom-form {
-  max-width: 400px;
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.row .col {
+  padding: 0 20px;
+  float: left;
+  box-sizing: border-box;
+}
+.row .col.x-50 {
+  width: 50%;
+}
+.row .col.x-100 {
+  width: 100%;
+}
+.content-wrapper {
+  min-height: 100%;
+  position: relative;
+}
+.get-in-touch {
+  max-width: 650px;
   margin: 0 auto;
-  padding: 2rem;
-  background-color: white;
-  border-radius: 5px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
 }
-
-.input-text {
+.get-in-touch .title {
+  text-align: center;
+  font-family: Raleway, sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-size: 36px;
+  line-height: 48px;
+  padding-bottom: 48px;
+}
+.contact-form .form-field {
+  margin: 32px 0;
+}
+.contact-form .input-text {
+  display: block;
   width: 100%;
-  padding: 0.5rem;
+  height: 36px;
   border: none;
-  border-bottom: 1px solid #ccc;
-  font-size: 16px;
+  border-bottom: 2px solid #000;
+  font-size: 18px;
+  font-weight: 400;
 }
-
-.label {
+.contact-form .input-text:focus {
+  outline: none;
+}
+.contact-form .label {
   position: absolute;
-  top: 0.75rem;
-  left: 1rem;
+  left: 20px;
+  bottom: 11px;
+  font-size: 18px;
+  line-height: 26px;
+  font-weight: 400;
+  color: #888;
+}
+.contact-form .submit-btn {
+  display: inline-block;
+  background-color: #000;
+  color: #fff;
+  font-family: Raleway, sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 2px;
   font-size: 16px;
-  color: #666;
-  pointer-events: none;
-  transition: 0.2s all;
-}
-
-.input-text:focus ~ .label,
-.input-text.not-empty ~ .label {
-  top: -1rem;
-  font-size: 12px;
-  color: #007bff;
-}
-
-.submit-btn {
-  width: 100%;
-  padding: 0.75rem;
-  background-color: #007bff;
+  padding: 8px 16px;
   border: none;
-  color: white;
-  font-weight: bold;
   cursor: pointer;
-  transition: background-color 0.2s;
 }
-
-.submit-btn:hover {
-  background-color: #0056b3;
+.note {
+  position: absolute;
+  left: 0;
+  bottom: 10px;
+  width: 100%;
+  text-align: center;
+  font-size: 16px;
+  line-height: 21px;
 }
-
+.note .link {
+  color: #888;
+  text-decoration: none;
+}
+.note .link:hover {
+  text-decoration: underline;
+}
+@media (min-width: 768px) {
+  .custom-form {
+    width: 75%;
+  }
+}
