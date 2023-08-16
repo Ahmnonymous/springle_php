@@ -41,8 +41,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if ($result) {
         $row = oci_fetch_assoc($stmt);
         if ($row) {
-            $hashedPassword = $row["PASSWORD"];
-            if (password_verify($password, $hashedPassword)) {
+            $storedPassword = $row["PASSWORD"]; // Assuming PASSWORD is the column name
+            if ($password === $storedPassword) {
                 $_SESSION['auth'] = true;
                 echo "Connected to Oracle Database2!";
                 //header("Location: form.php");
