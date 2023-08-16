@@ -80,7 +80,7 @@ if(isset($_SESSION['auth']))
           <!--label class="label" for="amount" style="top: -19px">Amount</label-->
         </div>
         <div class="form-field col-sm-4 mx-auto">
-          <input id="payReceived" name="pay_received" placeholder="Payment Received" class="input-text js-input form-control shadow-none" type="number" required>
+          <input id="pay_received" name="pay_received" placeholder="Payment Received" class="input-text js-input form-control shadow-none" type="number" required>
           <!--label class="label" for="payReceived">Pay Received</label-->
         </div>
       </div>
