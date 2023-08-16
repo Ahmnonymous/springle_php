@@ -57,6 +57,7 @@ html, body {
   border-bottom: 2px solid #000;
   font-size: 18px;
   font-weight: 400;
+  padding: 0.5rem;
 }
 .contact-form .input-text:focus {
   outline: none;
@@ -72,34 +73,52 @@ html, body {
 }
 .contact-form .submit-btn {
   display: inline-block;
-  background-color: #000;
+  background-color: #007bff;
   color: #fff;
   font-family: Raleway, sans-serif;
   text-transform: uppercase;
   letter-spacing: 2px;
   font-size: 16px;
-  padding: 8px 16px;
+  padding: 0.75rem;
   border: none;
+  font-weight: bold;
   cursor: pointer;
+  transition: background-color 0.2s;
 }
-.note {
+.contact-form .submit-btn:hover {
+  background-color: #0056b3;
+}
+
+/* Additional styling */
+body {
+  background-color: #f5f4f4;
+}
+.container {
+  margin-top: 4rem;
+}
+.custom-form {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 2rem;
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+.label {
   position: absolute;
-  left: 0;
-  bottom: 10px;
-  width: 100%;
-  text-align: center;
+  top: 0.75rem;
+  left: 1rem;
   font-size: 16px;
-  line-height: 21px;
+  color: #666;
+  pointer-events: none;
+  transition: 0.2s all;
 }
-.note .link {
-  color: #888;
-  text-decoration: none;
+.input-text:focus ~ .label,
+.input-text.not-empty ~ .label {
+  top: -1rem;
+  font-size: 12px;
+  color: #007bff;
 }
-.note .link:hover {
-  text-decoration: underline;
-}
-@media (min-width: 768px) {
-  .custom-form {
-    width: 75%;
-  }
+.submit-btn:hover {
+  background-color: #0056b3;
 }
