@@ -105,7 +105,7 @@ if(isset($_SESSION['auth']))
         </div>
           <div class="col-sm-4 mx-auto"></div>
       </div>
-      <div class="form-field col-sm-8 text-center">
+      <div class="form-field col-sm-12 text-center">
         <input class="submit-btn btn btn-primary" type="submit" value="Save">
       </div>
     </form>
