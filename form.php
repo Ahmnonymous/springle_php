@@ -39,7 +39,7 @@ if(isset($_SESSION['auth']))
     <div class="container mt-4">
   <section>
     
-    <form method="POST" action="includes/saleDetails.php" class="custom-form  mx-auto mb-5 contact-form bg-white p-5 shadow">
+    <form method="POST" action="includes/saleDetails_ora.php" class="custom-form  mx-auto mb-5 contact-form bg-white p-5 shadow">
     <h2 class="title text-center">Add Sale Details</h2>  
     <div class="row">
         <div class="form-field col-sm-4 mx-auto">
