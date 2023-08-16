@@ -41,26 +41,28 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $row = oci_fetch_assoc($stmt);
         if ($row) {
             $storedPassword = $row["PASSWORD"]; 
+            $username = $row["USERNAME"];
             if ($password === $storedPassword) {
                 $_SESSION['auth'] = true;
-                echo "Connected to Oracle Database2!";
+                //echo "Connected to Oracle Database2!";
+                $_SESSION['username'] = $username;
                 header("Location: form.php");
                 exit();
             } else {
                 $_SESSION['error_message'] = "Invalid login details";
-                echo "Connected to Oracle Databasssse!";
+                //echo "Connected to Oracle Databasssse!";
                 header("Location: index.php");
                 exit();
             }
         } else {
             $_SESSION['error_message'] = "Invalid login details";
-            echo "Connected to Oraclewerwerr Database!";
+            //echo "Connected to Oraclewerwerr Database!";
             header("Location: index.php");
             exit();
         }
     } else {
         $_SESSION['error_message'] = "Error executing query";
-        echo "Connected to Oracle Database!wew";
+        //echo "Connected to Oracle Database!wew";
         header("Location: index.php");
         exit();
     }

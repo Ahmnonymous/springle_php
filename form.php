@@ -34,6 +34,7 @@ if(isset($_SESSION['auth']))
           })
             </script>";
       unset($_SESSION['success_message']);
+      echo "<p>Welcome, " . $_SESSION['username'] . "!</p>";
     }
     ?>
     <div class="container mt-4">
