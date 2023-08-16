@@ -7,6 +7,7 @@ $dbname = 'springle_craft';
 // Establish a database connection
 $conn = new mysqli($host, $username, $password, $dbname);
 if ($conn->connect_error) {
+  echo 'erro';
   die("Connection failed: " . $conn->connect_error);
 }
 ?>
