@@ -48,7 +48,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     oci_bind_by_name($stmt, ':pay_balance', $pay_balance);
     
     // Bind the formatted date to the parameter
-    oci_bind_by_name($stmt, ':to_date', $formattedDate);
+   // oci_bind_by_name($stmt, ':to_date', $formattedDate);
 
     // Execute the statement
     $result = oci_execute($stmt);
@@ -64,14 +64,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     oci_free_statement($stmt);
 
     oci_close($conn); // Close Oracle connection
+    header("Location: form.php");
     
     // Display success message
     //echo "Record inserted successfully!";
 } else {
     echo "Server method is not POST";
 }
-
-oci_close($conn); // Close Oracle connection
-header("Location: form.php");
 
 ?>
