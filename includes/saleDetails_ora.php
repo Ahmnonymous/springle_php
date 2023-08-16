@@ -15,8 +15,8 @@ if (!$conn) {
 echo "Connected to Oracle Database!";
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $sal_id = $_POST["Sal_id"];
-    $customer_name = $_POST["customers_name"];
+    $sal_id = $_POST["customer_id"];
+    $customer_name = $_POST["customer_name"];
     $quantity = $_POST["quantity"];
     $bot_rec = $_POST["bot_rec"];
     $bot_balance = $_POST["bottle_balance"];

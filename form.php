@@ -47,7 +47,7 @@ if(isset($_SESSION['auth']))
           <!--label class="label" for="customer_id">Cus ID</label-->
         </div>
         <div class="form-field col-sm-4 mx-auto">
-          <input id="name" name="customers_name" placeholder="Customer Name" class="input-text js-input form-control shadow-none rounded-0" type="text" required>
+          <input id="name" name="customer_name" placeholder="Customer Name" class="input-text js-input form-control shadow-none rounded-0" type="text" required>
           <!--label class="label" for="name">Customer's Name</label-->
         </div>
       </div>
