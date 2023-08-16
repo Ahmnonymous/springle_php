@@ -1,7 +1,7 @@
 <?php
 $host = 'localhost';
 $username = 'springle_admin';
-$password = 'TlCc9b358L@o(S';
+$password = '786$karacHi';
 $dbname = 'springle_craft';
 
 // Establish a database connection
