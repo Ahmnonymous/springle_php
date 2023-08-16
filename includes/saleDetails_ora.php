@@ -28,7 +28,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $amount = $quantity * $rate;
 
     // Oracle-specific: Construct the SQL statement
-    $sql = "INSERT INTO SALE_DETAIL(book_id,sal_id, customer_name, bot_issue,bottle_recived, rate, amount, bot_balance, pay_received,pay_balance,to_date) 
+    $sql = "INSERT INTO SALE_DETAIL(book_id,sal_id, customer_name, bot_issue,bottle_recived, rate, amount, bot_balance, pay_recived,pay_balance,to_date) 
             VALUES (2237,:sal_id, :customer_name, :quantity, :bot_rec, :rate, :amount, :bot_balance, :pay_received,:pay_balance,:to_date)";
 
     // Prepare the statement
