@@ -86,7 +86,7 @@ if(isset($_SESSION['auth']))
       </div>
       <div class="row">
            <div class="form-field col-sm-4 mx-auto">
-          <input id="BotRecord" name="bot_rec" placeholder="Bot Received" class="input-text js-input form-control shadow-none rounded-0" type="number" required>
+          <input id="BotRecord" name="bot_rec" placeholder="Pay Balance" class="input-text js-input form-control shadow-none rounded-0" type="number" required>
           <!--label class="label" for="BotRecord">Pay Balance</label-->
         </div>
         
@@ -95,14 +95,13 @@ if(isset($_SESSION['auth']))
           <!--label class="label" for="mobile">Contact</label-->
         </div>
       </div>
-      <div class="row">
-             <?php
-        $formattedDate = date('Y-m-d');
-        ?>
+      <input id="date" name="date" placeholder="Date" value="<?php echo $formattedDate; ?>" class="input-text js-input form-control shadow-none bg-white rounded-0" type="text" disabled required>
+
+      <!--div class="row">
         <div class="form-field col-sm-4 mx-auto">
           <input id="date" name="date" placeholder="Date" value="<?php echo $formattedDate; ?>" class="input-text js-input form-control shadow-none bg-white rounded-0" type="text" disabled required>
-          <!--label class="label" for="date" style="top: -19px">Date</label-->
-        </div>
+          <label class="label" for="date" style="top: -19px">Date</label>
+        </div-->
           <div class="col-sm-4 mx-auto"></div>
       </div>
       <div class="form-field col-sm-12 text-center">
