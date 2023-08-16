@@ -6,7 +6,6 @@ $username = 'HR';
 $password = 'HR';
 $db = '124.29.225.97:1521/orcl'; 
 
-
 $conn = oci_connect($username, $password, $db);
 if (!$conn) {
     $error = oci_error();
@@ -59,10 +58,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     // Free the statement
     oci_free_statement($stmt);
+
+    oci_close($conn); // Close Oracle connection
+    
+    // Display success message
+    echo "Record inserted successfully!";
 } else {
     echo "Server method is not POST";
 }
-
-oci_close($conn); // Close Oracle connection
-header("Location: ../form.php");
 ?>
