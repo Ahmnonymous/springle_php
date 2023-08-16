@@ -1,7 +1,7 @@
 <?php
 $db_user = 'HR';
 $db_password = 'HR';
-$db_host = '124.29.225.97/ORC'; 
+$db_host = '124.29.225.97:1521/orcl'; 
 
 $conn = oci_connect($db_user, $db_password, $db_host);
 
