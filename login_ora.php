@@ -2,14 +2,14 @@
 session_start();
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-      include_once "db_connection.php";
+      include_once "db_ora.php";
 
     $email = $_POST["email"];
     $password = $_POST["password"];
 
     if (empty($email) || empty($password)) {
         $_SESSION['error_message'] = "All fields are required";
-        header("Location: ../index.php");
+        header("Location: index.php");
     }
 
     $sql = "SELECT * FROM users WHERE email = '$email'";
@@ -21,17 +21,17 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         if (password_verify($password, $hashedPassword)) {
             $_SESSION['auth'] = true;
-            header("Location: ../form.php");
+            header("Location: form.php");
             exit();
         } else {
             $_SESSION['error_message']= "Invalid login details";
-            header("Location: ../index.php");
+            header("Location: index.php");
 
         }
     } 
     else{
         $_SESSION['error_message'] = "Invalid login details";
-        header("Location: ../index.php");
+        header("Location: index.php");
     }
 
 

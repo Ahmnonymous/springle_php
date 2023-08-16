@@ -1,6 +1,6 @@
 <?php
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    include_once "db_connection.php";
+    include_once "db_sql.php";
 
     $name = $_POST["name"];
     $email = $_POST["email"];
@@ -23,10 +23,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     if ($conn->query($sql) === TRUE) {
         $_SESSION['auth'] = TRUE;
-        header("location:../index.php");
+        header("location: index.php");
 
     } else {
-        echo "Error: " . $sql . "<br>" . $conn->error;
+        echo "Error: " . $sql . "<br>" . $conn->error();
     }
 
     $conn->close();

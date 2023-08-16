@@ -4,8 +4,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="jquery-ui.css">
-  <link rel="stylesheet" href="includes/style.css">
+  <link rel="stylesheet" href="js/jquery-ui.css">
+  <link rel="stylesheet" href="css/style.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/11.4.24/sweetalert2.all.js"></script>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 </head>
@@ -15,8 +15,9 @@
   <div class="container mt-4">
     <div class="container mt-4">
   <section>
-    <h2 class="title text-center">Sing Up</h2>
-    <form method="POST" action="includes/auth.php" class="custom-form  mx-auto mb-5 contact-form bg-white p-5 shadow">
+    
+    <form method="POST" action="register_ora.php" class="custom-form  mx-auto mb-5 contact-form bg-white p-5 shadow">
+    <h2 class="title text-center">Springle - Sign Up</h2>
       <div class="form-field col-lg-6 col-sm-12 mx-auto" style="margin:40px">
           <input id="name" name="name" class="input-text js-input form-control shadow-none rounded-0" type="text" required>
           <label class="label" for="name">User Name</label>
@@ -46,8 +47,8 @@
 </div>
 
   </div>
-  <script src="jquery.js"></script>
-  <script src="jquery-ui.js"></script>
+  <script src="js/jquery.js"></script>
+  <script src="js/jquery-ui.js"></script>
   <script>
     $('.js-input').keyup(function() {
       if ($(this).val()) {

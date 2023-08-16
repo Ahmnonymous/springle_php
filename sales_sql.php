@@ -1,6 +1,6 @@
 <?php
 session_start();
-include('db_connection.php');
+include('db_sql.php');
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
   $sal_id = $_POST["customer_id"];
@@ -28,5 +28,5 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 }
 
 $conn->close();
-header("Location: ../form.php");
+header("Location: form.php");
 ?>
