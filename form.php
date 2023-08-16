@@ -8,8 +8,8 @@ session_start();
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="jquery-ui.css">
-  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="js/jquery-ui.css">
+  <link rel="stylesheet" href="css/style.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/11.4.24/sweetalert2.all.js"></script>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 </head>
@@ -38,9 +38,10 @@ if(isset($_SESSION['auth']))
     ?>
     <div class="container mt-4">
   <section>
-    <h2 class="title text-center">Add Sale Details</h2>
+    
     <form method="POST" action="includes/saleDetails.php" class="custom-form  mx-auto mb-5 contact-form bg-white p-5 shadow">
-      <div class="row">
+    <h2 class="title text-center">Add Sale Details</h2>  
+    <div class="row">
         <div class="form-field col-sm-4 mx-auto">
           <input id="customer_id" name="customer_id" class="input-text js-input form-control shadow-none rounded-0" type="text" required>
           <label class="label" for="customer_id">Cus ID</label>
