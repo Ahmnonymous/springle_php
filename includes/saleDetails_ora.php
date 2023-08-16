@@ -1,6 +1,6 @@
 <?php
 session_start();
-include('oracle_connection.php');
+include('db.php');
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
   $sal_id = $_POST["customer_id"];
