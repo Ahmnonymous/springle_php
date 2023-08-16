@@ -14,19 +14,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   $date = $_POST["date"];
   $amount = $quantity * $rate;
 
-  $escaped_sal_id = oci_escape_string($conn, $sal_id);
-  $escaped_customer_name = oci_escape_string($conn, $customer_name);
-  $escaped_quantity = intval($quantity);
-  $escaped_bot_rec = intval($bot_rec);
-  $escaped_bot_balance = intval($bot_balance);
-  $escaped_pay_received = intval($pay_received);
-  $escaped_rate = floatval($rate);
-  $escaped_amount = floatval($amount);
-  $escaped_contact = intval($contact);
-  $escaped_date = oci_escape_string($conn, $date);
-
   $sql = "INSERT INTO sale_detail (book_id, sal_id, customer_name, bot_issue, Bot_recived, Rate, Amount, Bot_balance, Pay_recived, to_date) 
-          VALUES (2237, '$escaped_sal_id', '$escaped_customer_name', $escaped_quantity, $escaped_bot_rec, $escaped_rate, $escaped_amount, $escaped_bot_balance, $escaped_pay_received, '$escaped_date')";
+          VALUES (2237, '$sal_id', '$customer_name', $quantity, $bot_rec, $rate, $amount, $bot_balance, $pay_received, '$date')";
 
   $query = oci_parse($conn, $sql);
   $result = oci_execute($query);
