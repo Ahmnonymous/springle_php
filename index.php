@@ -34,84 +34,27 @@ session_start();
     }
     ?>
     <div class="container mt-4">
-  <section>
-    <h2 class="title text-center">Add Sale Details</h2>
-    <form method="POST" action="includes/saleDetails.php" class="custom-form  mx-auto mb-5 contact-form bg-white p-5 shadow">
-      <div class="row">
-        <div class="form-field col-sm-4 mx-auto">
-          <input id="customer_id" name="customer_id" class="input-text js-input form-control shadow-none rounded-0" type="text" required>
-          <label class="label" for="customer_id">Customer ID</label>
-        </div>
-        <div class="form-field col-sm-4 mx-auto">
-          <input id="name" name="customers_name" class="input-text js-input form-control shadow-none rounded-0" type="text" required>
-          <label class="label" for="name">Customer's Name</label>
-        </div>
-      </div>
-      <div class="row">
-        <div class="form-field col-sm-4 mx-auto">
-          <input id="quantity" name="quantity" class="input-text js-input form-control shadow-none rounded-0" type="number" required>
-          <label class="label" for="quantity">Quantity</label>
-        </div>
-        <div class="form-field col-sm-4 mx-auto">
-          <input id="rate" name="rate" class="input-text js-input form-control shadow-none rounded-0" type="number" required>
-          <label class="label" for="rate">Rate</label>
-        </div>
-      </div>
-      <div class="row">
-        <div class="form-field col-sm-4 mx-auto">
-          <input id="BotRecord" name="bot_rec" class="input-text js-input form-control shadow-none rounded-0" type="number" required>
-          <label class="label" for="BotRecord">Pay Balance</label>
-        </div>
-        <div class="form-field col-sm-4 mx-auto">
-          <input id="bottle_balance" name="bottle_balance" class="input-text js-input form-control shadow-none rounded-0" type="number" required>
-          <label class="label" for="bottle_balance">Bot Balance</label>
-        </div>
-      </div>
-      <div class="row">
-        <div class="form-field col-sm-4 mx-auto">
-          <input id="amount" name="amount" class="input-text js-input form-control shadow-none bg-white rounded-0" type="text" disabled required>
-          <label class="label" for="amount" style="top: -19px">Amount</label>
-        </div>
-        <div class="form-field col-sm-4 mx-auto">
-          <input id="payReceived" name="pay_received" class="input-text js-input form-control shadow-none" type="number" required>
-          <label class="label" for="payReceived">Pay Received</label>
-        </div>
-      </div>
-      <div class="row">
-            <?php
-        $formattedDate = date('Y-m-d');
-        ?>
-        <div class="form-field col-sm-4 mx-auto">
-          <input id="date" name="date" value="<?php echo $formattedDate; ?>" class="input-text js-input form-control shadow-none bg-white rounded-0" type="text" disabled required>
-          <label class="label" for="date" style="top: -19px">Date</label>
-        </div>
-        <div class="col-sm-4 mx-auto"></div>
-      </div>
-      <div class="form-field col-sm-12 text-center">
-        <input class="submit-btn btn btn-primary" type="submit" value="Save">
-      </div>
-    </form>
-  </section>
-</div>
+      <section>
+        <h2 class="title text-center">Login</h2>
+        <form method="POST" action="login_auth.php" class="custom-form mx-auto mb-5 contact-form bg-white p-5 shadow">
+          <div class="form-field col-sm-4 mx-auto">
+            <input id="email" name="email" class="input-text js-input form-control shadow-none rounded-0" type="email" required>
+            <label class="label" for="email">Email</label>
+          </div>
+          <div class="form-field col-sm-4 mx-auto">
+            <input id="password" name="password" class="input-text js-input form-control shadow-none rounded-0" type="password" required>
+            <label class="label" for="password">Password</label>
+          </div>
+          <div class="form-field col-sm-12 text-center">
+            <input class="submit-btn btn btn-primary" type="submit" value="Login">
+          </div>
+        </form>
+      </section>
+    </div>
 
   </div>
   <script src="jquery.js"></script>
   <script src="jquery-ui.js"></script>
-  <script>
-    $('.js-input').keyup(function() {
-      if ($(this).val()) {
-        $(this).addClass('not-empty');
-      } else {
-        $(this).removeClass('not-empty');
-      }
-    });
-    $("#quantity, #rate").on('input', function() {
-            var qty = parseFloat($("#quantity").val()) || 0;
-            var rate = parseFloat($("#rate").val()) || 0; 
-            var amount = (qty * rate);
-            $("#amount").val(amount.toFixed(2));
-        });
-  </script>
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
 </body>
