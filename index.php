@@ -16,8 +16,8 @@
 
   <div class="container">
     <section>
-      <h2 class="title text-center">Login</h2>
       <form method="POST" action="includes/login_auth.php" class="custom-form mx-auto mb-5 contact-form shadow">
+      <h2 class="title text-center">Springle - User Login</h2>
         <div class="form-field col-sm-12 mx-auto">
           <input id="email" name="email" placeholder="email" class="input-text js-input form-control shadow-none rounded-0" type="email"
             required>
