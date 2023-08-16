@@ -11,7 +11,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   $pay_received = $_POST["pay_received"];
   $rate = $_POST["rate"];
   $contact = $_POST["contact"];
-  $date = $_POST["date"];
+  //$date = $_POST["date"];
   $amount = $quantity * $rate;
 
   // Use prepared statements to prevent SQL injection
