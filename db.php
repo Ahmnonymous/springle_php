@@ -13,5 +13,5 @@ else {
     echo "Connected to Oracle successfully!";
 }
 
-oci_close($connection);
+oci_close($conn);
 ?>
