@@ -1,0 +1,187 @@
+[04-Aug-2023 07:00:02 UTC] PHP Warning:  mysqli::__construct(): (HY000/1044): Access denied for user 'springle_root'@'localhost' to database 'springle_codecraft' in /home2/springle/public_html/includes/db_connection.php on line 8
+[04-Aug-2023 07:04:19 UTC] PHP Warning:  mysqli::__construct(): (HY000/1044): Access denied for user 'springle_root'@'localhost' to database 'springle_codecraft' in /home2/springle/public_html/includes/db_connection.php on line 8
+[04-Aug-2023 07:37:50 UTC] PHP Warning:  include_once(includes/db_connection.php): failed to open stream: No such file or directory in /home2/springle/public_html/includes/auth.php on line 3
+[04-Aug-2023 07:37:50 UTC] PHP Warning:  include_once(): Failed opening 'includes/db_connection.php' for inclusion (include_path='.:/opt/cpanel/ea-php74/root/usr/share/pear') in /home2/springle/public_html/includes/auth.php on line 3
+[04-Aug-2023 07:37:50 UTC] PHP Fatal error:  Uncaught Error: Call to a member function query() on null in /home2/springle/public_html/includes/auth.php:24
+Stack trace:
+#0 {main}
+  thrown in /home2/springle/public_html/includes/auth.php on line 24
+[04-Aug-2023 07:38:05 UTC] PHP Warning:  include_once(includes/db_connection.php): failed to open stream: No such file or directory in /home2/springle/public_html/includes/auth.php on line 3
+[04-Aug-2023 07:38:05 UTC] PHP Warning:  include_once(): Failed opening 'includes/db_connection.php' for inclusion (include_path='.:/opt/cpanel/ea-php74/root/usr/share/pear') in /home2/springle/public_html/includes/auth.php on line 3
+[04-Aug-2023 07:38:05 UTC] PHP Fatal error:  Uncaught Error: Call to a member function query() on null in /home2/springle/public_html/includes/auth.php:24
+Stack trace:
+#0 {main}
+  thrown in /home2/springle/public_html/includes/auth.php on line 24
+[04-Aug-2023 07:38:09 UTC] PHP Warning:  include_once(includes/db_connection.php): failed to open stream: No such file or directory in /home2/springle/public_html/includes/auth.php on line 3
+[04-Aug-2023 07:38:09 UTC] PHP Warning:  include_once(): Failed opening 'includes/db_connection.php' for inclusion (include_path='.:/opt/cpanel/ea-php74/root/usr/share/pear') in /home2/springle/public_html/includes/auth.php on line 3
+[04-Aug-2023 07:38:09 UTC] PHP Fatal error:  Uncaught Error: Call to a member function query() on null in /home2/springle/public_html/includes/auth.php:24
+Stack trace:
+#0 {main}
+  thrown in /home2/springle/public_html/includes/auth.php on line 24
+[04-Aug-2023 07:38:12 UTC] PHP Warning:  include_once(includes/db_connection.php): failed to open stream: No such file or directory in /home2/springle/public_html/includes/auth.php on line 3
+[04-Aug-2023 07:38:12 UTC] PHP Warning:  include_once(): Failed opening 'includes/db_connection.php' for inclusion (include_path='.:/opt/cpanel/ea-php74/root/usr/share/pear') in /home2/springle/public_html/includes/auth.php on line 3
+[04-Aug-2023 07:38:12 UTC] PHP Fatal error:  Uncaught Error: Call to a member function query() on null in /home2/springle/public_html/includes/auth.php:24
+Stack trace:
+#0 {main}
+  thrown in /home2/springle/public_html/includes/auth.php on line 24
+[04-Aug-2023 07:39:12 UTC] PHP Warning:  include_once(includes/db_connection.php): failed to open stream: No such file or directory in /home2/springle/public_html/includes/auth.php on line 3
+[04-Aug-2023 07:39:12 UTC] PHP Warning:  include_once(): Failed opening 'includes/db_connection.php' for inclusion (include_path='.:/opt/cpanel/ea-php74/root/usr/share/pear') in /home2/springle/public_html/includes/auth.php on line 3
+[04-Aug-2023 07:39:12 UTC] PHP Fatal error:  Uncaught Error: Call to a member function query() on null in /home2/springle/public_html/includes/auth.php:24
+Stack trace:
+#0 {main}
+  thrown in /home2/springle/public_html/includes/auth.php on line 24
+[04-Aug-2023 08:35:45 UTC] PHP Warning:  include_once(includes/db_connection.php): failed to open stream: No such file or directory in /home2/springle/public_html/includes/auth.php on line 3
+[04-Aug-2023 08:35:45 UTC] PHP Warning:  include_once(): Failed opening 'includes/db_connection.php' for inclusion (include_path='.:/opt/cpanel/ea-php74/root/usr/share/pear') in /home2/springle/public_html/includes/auth.php on line 3
+[04-Aug-2023 08:35:45 UTC] PHP Fatal error:  Uncaught Error: Call to a member function query() on null in /home2/springle/public_html/includes/auth.php:24
+Stack trace:
+#0 {main}
+  thrown in /home2/springle/public_html/includes/auth.php on line 24
+[04-Aug-2023 08:36:50 UTC] PHP Warning:  include_once(includes/db_connection.php): failed to open stream: No such file or directory in /home2/springle/public_html/includes/auth.php on line 3
+[04-Aug-2023 08:36:50 UTC] PHP Warning:  include_once(): Failed opening 'includes/db_connection.php' for inclusion (include_path='.:/opt/cpanel/ea-php74/root/usr/share/pear') in /home2/springle/public_html/includes/auth.php on line 3
+[04-Aug-2023 08:36:50 UTC] PHP Fatal error:  Uncaught Error: Call to a member function query() on null in /home2/springle/public_html/includes/auth.php:24
+Stack trace:
+#0 {main}
+  thrown in /home2/springle/public_html/includes/auth.php on line 24
+[04-Aug-2023 08:37:47 UTC] PHP Warning:  include_once(includes/db_connection.php): failed to open stream: No such file or directory in /home2/springle/public_html/includes/auth.php on line 3
+[04-Aug-2023 08:37:47 UTC] PHP Warning:  include_once(): Failed opening 'includes/db_connection.php' for inclusion (include_path='.:/opt/cpanel/ea-php74/root/usr/share/pear') in /home2/springle/public_html/includes/auth.php on line 3
+[04-Aug-2023 08:37:47 UTC] PHP Fatal error:  Uncaught Error: Call to a member function query() on null in /home2/springle/public_html/includes/auth.php:24
+Stack trace:
+#0 {main}
+  thrown in /home2/springle/public_html/includes/auth.php on line 24
+[04-Aug-2023 08:38:01 UTC] PHP Warning:  include_once(includes/db_connection.php): failed to open stream: No such file or directory in /home2/springle/public_html/includes/auth.php on line 3
+[04-Aug-2023 08:38:01 UTC] PHP Warning:  include_once(): Failed opening 'includes/db_connection.php' for inclusion (include_path='.:/opt/cpanel/ea-php74/root/usr/share/pear') in /home2/springle/public_html/includes/auth.php on line 3
+[04-Aug-2023 08:38:01 UTC] PHP Fatal error:  Uncaught Error: Call to a member function query() on null in /home2/springle/public_html/includes/auth.php:24
+Stack trace:
+#0 {main}
+  thrown in /home2/springle/public_html/includes/auth.php on line 24
+[04-Aug-2023 08:38:07 UTC] PHP Warning:  include_once(includes/db_connection.php): failed to open stream: No such file or directory in /home2/springle/public_html/includes/auth.php on line 3
+[04-Aug-2023 08:38:07 UTC] PHP Warning:  include_once(): Failed opening 'includes/db_connection.php' for inclusion (include_path='.:/opt/cpanel/ea-php74/root/usr/share/pear') in /home2/springle/public_html/includes/auth.php on line 3
+[04-Aug-2023 08:38:07 UTC] PHP Fatal error:  Uncaught Error: Call to a member function query() on null in /home2/springle/public_html/includes/auth.php:24
+Stack trace:
+#0 {main}
+  thrown in /home2/springle/public_html/includes/auth.php on line 24
+[04-Aug-2023 10:41:37 UTC] PHP Parse error:  syntax error, unexpected end of file in /home2/springle/public_html/includes/login_auth.php on line 43
+[04-Aug-2023 10:42:35 UTC] PHP Parse error:  syntax error, unexpected end of file in /home2/springle/public_html/includes/login_auth.php on line 43
+[04-Aug-2023 11:51:03 UTC] PHP Parse error:  syntax error, unexpected end of file in /home2/springle/public_html/includes/login_auth.php on line 43
+[04-Aug-2023 11:58:03 UTC] PHP Warning:  include(db_connection): failed to open stream: No such file or directory in /home2/springle/public_html/includes/login_auth.php on line 5
+[04-Aug-2023 11:58:03 UTC] PHP Warning:  include(db_connection): failed to open stream: No such file or directory in /home2/springle/public_html/includes/login_auth.php on line 5
+[04-Aug-2023 11:58:03 UTC] PHP Warning:  include(): Failed opening 'db_connection' for inclusion (include_path='.:/opt/cpanel/ea-php74/root/usr/share/pear') in /home2/springle/public_html/includes/login_auth.php on line 5
+[04-Aug-2023 11:58:03 UTC] PHP Fatal error:  Uncaught Error: Call to a member function query() on null in /home2/springle/public_html/includes/login_auth.php:17
+Stack trace:
+#0 {main}
+  thrown in /home2/springle/public_html/includes/login_auth.php on line 17
+[04-Aug-2023 11:58:07 UTC] PHP Warning:  include(db_connection): failed to open stream: No such file or directory in /home2/springle/public_html/includes/login_auth.php on line 5
+[04-Aug-2023 11:58:07 UTC] PHP Warning:  include(db_connection): failed to open stream: No such file or directory in /home2/springle/public_html/includes/login_auth.php on line 5
+[04-Aug-2023 11:58:07 UTC] PHP Warning:  include(): Failed opening 'db_connection' for inclusion (include_path='.:/opt/cpanel/ea-php74/root/usr/share/pear') in /home2/springle/public_html/includes/login_auth.php on line 5
+[04-Aug-2023 11:58:07 UTC] PHP Fatal error:  Uncaught Error: Call to a member function query() on null in /home2/springle/public_html/includes/login_auth.php:17
+Stack trace:
+#0 {main}
+  thrown in /home2/springle/public_html/includes/login_auth.php on line 17
+[04-Aug-2023 11:58:27 UTC] PHP Warning:  include(db_connection): failed to open stream: No such file or directory in /home2/springle/public_html/includes/login_auth.php on line 5
+[04-Aug-2023 11:58:27 UTC] PHP Warning:  include(db_connection): failed to open stream: No such file or directory in /home2/springle/public_html/includes/login_auth.php on line 5
+[04-Aug-2023 11:58:27 UTC] PHP Warning:  include(): Failed opening 'db_connection' for inclusion (include_path='.:/opt/cpanel/ea-php74/root/usr/share/pear') in /home2/springle/public_html/includes/login_auth.php on line 5
+[04-Aug-2023 11:58:27 UTC] PHP Fatal error:  Uncaught Error: Call to a member function query() on null in /home2/springle/public_html/includes/login_auth.php:17
+Stack trace:
+#0 {main}
+  thrown in /home2/springle/public_html/includes/login_auth.php on line 17
+[11-Aug-2023 10:26:49 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function oci_connect() in /home2/springle/public_html/includes/oracle_connection.php:16
+Stack trace:
+#0 {main}
+  thrown in /home2/springle/public_html/includes/oracle_connection.php on line 16
+[11-Aug-2023 10:32:14 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function oci_connect() in /home2/springle/public_html/includes/oracle_connection.php:16
+Stack trace:
+#0 {main}
+  thrown in /home2/springle/public_html/includes/oracle_connection.php on line 16
+[11-Aug-2023 10:50:29 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function oci_connect() in /home2/springle/public_html/includes/oracle_connection.php:16
+Stack trace:
+#0 {main}
+  thrown in /home2/springle/public_html/includes/oracle_connection.php on line 16
+[11-Aug-2023 18:07:24 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function oci_connect() in /home2/springle/public_html/includes/oracle_connection.php:16
+Stack trace:
+#0 {main}
+  thrown in /home2/springle/public_html/includes/oracle_connection.php on line 16
+[12-Aug-2023 05:14:33 UTC] PHP Warning:  oci_connect(): ORA-12545: Connect failed because target host or object does not exist in /home2/springle/public_html/includes/oracle_connection.php on line 16
+[12-Aug-2023 05:20:40 UTC] PHP Warning:  oci_connect(): ORA-12170: TNS:Connect timeout occurred in /home2/springle/public_html/includes/oracle_connection.php on line 16
+[12-Aug-2023 05:22:41 UTC] PHP Warning:  oci_connect(): ORA-12170: TNS:Connect timeout occurred in /home2/springle/public_html/includes/oracle_connection.php on line 16
+[12-Aug-2023 05:27:44 UTC] PHP Warning:  oci_connect(): ORA-12170: TNS:Connect timeout occurred in /home2/springle/public_html/includes/oracle_connection.php on line 16
+[12-Aug-2023 05:36:17 UTC] PHP Warning:  oci_connect(): ORA-12545: Connect failed because target host or object does not exist in /home2/springle/public_html/includes/oracle_connection.php on line 16
+[12-Aug-2023 05:37:42 UTC] PHP Warning:  oci_connect(): ORA-12170: TNS:Connect timeout occurred in /home2/springle/public_html/includes/oracle_connection.php on line 16
+[12-Aug-2023 05:39:21 UTC] PHP Warning:  oci_connect(): ORA-12170: TNS:Connect timeout occurred in /home2/springle/public_html/includes/oracle_connection.php on line 16
+[12-Aug-2023 05:42:15 UTC] PHP Warning:  oci_connect(): ORA-12170: TNS:Connect timeout occurred in /home2/springle/public_html/includes/oracle_connection.php on line 16
+[12-Aug-2023 05:50:43 UTC] PHP Warning:  oci_connect(): ORA-12170: TNS:Connect timeout occurred in /home2/springle/public_html/includes/oracle_connection.php on line 16
+[12-Aug-2023 06:01:55 UTC] PHP Warning:  oci_connect(): ORA-12170: TNS:Connect timeout occurred in /home2/springle/public_html/includes/oracle_connection.php on line 16
+[12-Aug-2023 06:25:17 UTC] PHP Warning:  oci_connect(): ORA-12170: TNS:Connect timeout occurred in /home2/springle/public_html/includes/oracle_connection.php on line 16
+[12-Aug-2023 06:29:01 UTC] PHP Warning:  oci_connect(): ORA-12170: TNS:Connect timeout occurred in /home2/springle/public_html/includes/oracle_connection.php on line 16
+[12-Aug-2023 06:30:14 UTC] PHP Warning:  oci_connect(): ORA-12170: TNS:Connect timeout occurred in /home2/springle/public_html/includes/oracle_connection.php on line 16
+[12-Aug-2023 06:33:25 UTC] PHP Warning:  oci_connect(): ORA-12170: TNS:Connect timeout occurred in /home2/springle/public_html/includes/oracle_connection.php on line 16
+[12-Aug-2023 06:35:10 UTC] PHP Warning:  oci_connect(): ORA-12170: TNS:Connect timeout occurred in /home2/springle/public_html/includes/oracle_connection.php on line 16
+[12-Aug-2023 06:45:47 UTC] PHP Warning:  oci_connect(): ORA-12170: TNS:Connect timeout occurred in /home2/springle/public_html/includes/oracle_connection.php on line 16
+[12-Aug-2023 08:11:27 UTC] PHP Warning:  oci_connect(): ORA-12170: TNS:Connect timeout occurred in /home2/springle/public_html/includes/oracle_connection.php on line 16
+[12-Aug-2023 09:26:50 UTC] PHP Warning:  oci_connect(): ORA-12170: TNS:Connect timeout occurred in /home2/springle/public_html/includes/oracle_connection.php on line 16
+[12-Aug-2023 09:31:27 UTC] PHP Warning:  oci_connect(): ORA-12170: TNS:Connect timeout occurred in /home2/springle/public_html/includes/oracle_connection.php on line 16
+[12-Aug-2023 09:32:12 UTC] PHP Warning:  oci_connect(): ORA-12545: Connect failed because target host or object does not exist in /home2/springle/public_html/includes/oracle_connection.php on line 16
+[12-Aug-2023 09:39:15 UTC] PHP Warning:  oci_connect(): ORA-12154: TNS:could not resolve the connect identifier specified in /home2/springle/public_html/includes/oracle_connection.php on line 16
+[12-Aug-2023 09:39:29 UTC] PHP Warning:  oci_connect(): ORA-12154: TNS:could not resolve the connect identifier specified in /home2/springle/public_html/includes/oracle_connection.php on line 16
+[12-Aug-2023 09:41:20 UTC] PHP Warning:  oci_connect(): ORA-12170: TNS:Connect timeout occurred in /home2/springle/public_html/includes/oracle_connection.php on line 16
+[12-Aug-2023 09:42:42 UTC] PHP Warning:  oci_connect(): ORA-12170: TNS:Connect timeout occurred in /home2/springle/public_html/includes/oracle_connection.php on line 15
+[12-Aug-2023 10:23:55 UTC] PHP Warning:  oci_connect(): ORA-12170: TNS:Connect timeout occurred in /home2/springle/public_html/includes/oracle_connection.php on line 15
+[12-Aug-2023 10:34:58 UTC] PHP Parse error:  syntax error, unexpected variable "$conn" in /home2/springle/public_html/includes/oracle_connection.php on line 16
+[12-Aug-2023 10:36:56 UTC] PHP Warning:  oci_connect(): ORA-12154: TNS:could not resolve the connect identifier specified in /home2/springle/public_html/includes/oracle_connection.php on line 16
+[12-Aug-2023 10:47:13 UTC] PHP Warning:  oci_connect(): ORA-12154: TNS:could not resolve the connect identifier specified in /home2/springle/public_html/includes/oracle_connection.php on line 16
+[12-Aug-2023 10:49:39 UTC] PHP Warning:  oci_connect(): ORA-12170: TNS:Connect timeout occurred in /home2/springle/public_html/includes/oracle_connection.php on line 15
+[12-Aug-2023 10:49:39 UTC] PHP Warning:  Undefined array key "Sal_id" in /home2/springle/public_html/includes/oracle_connection.php on line 23
+[12-Aug-2023 10:49:39 UTC] PHP Warning:  Undefined array key "date" in /home2/springle/public_html/includes/oracle_connection.php on line 31
+[12-Aug-2023 10:49:39 UTC] PHP Fatal error:  Uncaught TypeError: oci_parse(): Argument #1 ($connection) must be of type resource, bool given in /home2/springle/public_html/includes/oracle_connection.php:39
+Stack trace:
+#0 /home2/springle/public_html/includes/oracle_connection.php(39): oci_parse()
+#1 {main}
+  thrown in /home2/springle/public_html/includes/oracle_connection.php on line 39
+[12-Aug-2023 11:42:55 UTC] PHP Warning:  oci_connect(): ORA-12170: TNS:Connect timeout occurred in /home2/springle/public_html/includes/oracle_connection.php on line 15
+[12-Aug-2023 11:52:56 UTC] PHP Warning:  oci_connect(): ORA-12170: TNS:Connect timeout occurred in /home2/springle/public_html/includes/oracle_connection.php on line 15
+[12-Aug-2023 12:12:29 UTC] PHP Warning:  oci_connect(): ORA-12154: TNS:could not resolve the connect identifier specified in /home2/springle/public_html/includes/oracle_connection.php on line 16
+[12-Aug-2023 12:12:43 UTC] PHP Warning:  oci_connect(): ORA-12154: TNS:could not resolve the connect identifier specified in /home2/springle/public_html/includes/oracle_connection.php on line 16
+[12-Aug-2023 12:13:27 UTC] PHP Warning:  oci_connect(): ORA-12541: TNS:no listener in /home2/springle/public_html/includes/oracle_connection.php on line 16
+[12-Aug-2023 12:15:25 UTC] PHP Warning:  oci_connect(): ORA-12541: TNS:no listener in /home2/springle/public_html/includes/oracle_connection.php on line 16
+[12-Aug-2023 12:16:25 UTC] PHP Warning:  oci_connect(): ORA-12541: TNS:no listener in /home2/springle/public_html/includes/oracle_connection.php on line 16
+[12-Aug-2023 12:18:06 UTC] PHP Warning:  oci_connect(): ORA-12541: TNS:no listener in /home2/springle/public_html/includes/oracle_connection.php on line 16
+[12-Aug-2023 12:37:07 UTC] PHP Warning:  oci_connect(): ORA-12541: TNS:no listener in /home2/springle/public_html/includes/oracle_connection.php on line 16
+[12-Aug-2023 12:38:54 UTC] PHP Warning:  oci_connect(): ORA-12170: TNS:Connect timeout occurred in /home2/springle/public_html/includes/oracle_connection.php on line 16
+[12-Aug-2023 14:39:42 UTC] PHP Warning:  oci_connect(): ORA-12154: TNS:could not resolve the connect identifier specified in /home2/springle/public_html/includes/oracle_connection.php on line 16
+[12-Aug-2023 14:40:54 UTC] PHP Warning:  oci_connect(): ORA-12154: TNS:could not resolve the connect identifier specified in /home2/springle/public_html/includes/oracle_connection.php on line 16
+[12-Aug-2023 14:44:25 UTC] PHP Warning:  oci_connect(): ORA-12154: TNS:could not resolve the connect identifier specified in /home2/springle/public_html/includes/oracle_connection.php on line 16
+[12-Aug-2023 14:44:49 UTC] PHP Warning:  oci_connect(): ORA-12154: TNS:could not resolve the connect identifier specified in /home2/springle/public_html/includes/oracle_connection.php on line 16
+[12-Aug-2023 14:44:54 UTC] PHP Warning:  oci_connect(): ORA-12154: TNS:could not resolve the connect identifier specified in /home2/springle/public_html/includes/oracle_connection.php on line 16
+[12-Aug-2023 14:45:21 UTC] PHP Warning:  oci_connect(): ORA-12154: TNS:could not resolve the connect identifier specified in /home2/springle/public_html/includes/oracle_connection.php on line 16
+[12-Aug-2023 14:46:08 UTC] PHP Warning:  oci_connect(): ORA-12154: TNS:could not resolve the connect identifier specified in /home2/springle/public_html/includes/oracle_connection.php on line 16
+[12-Aug-2023 14:47:12 UTC] PHP Warning:  oci_connect(): ORA-12154: TNS:could not resolve the connect identifier specified in /home2/springle/public_html/includes/oracle_connection.php on line 16
+[13-Aug-2023 09:27:18 UTC] PHP Warning:  oci_connect(): ORA-12154: TNS:could not resolve the connect identifier specified in /home2/springle/public_html/includes/oracle_connection.php on line 16
+[13-Aug-2023 09:33:52 UTC] PHP Warning:  oci_connect(): ORA-12154: TNS:could not resolve the connect identifier specified in /home2/springle/public_html/includes/oracle_connection.php on line 16
+[13-Aug-2023 09:33:56 UTC] PHP Warning:  oci_connect(): ORA-12154: TNS:could not resolve the connect identifier specified in /home2/springle/public_html/includes/oracle_connection.php on line 16
+[13-Aug-2023 10:00:32 UTC] PHP Warning:  oci_connect(): ORA-12545: Connect failed because target host or object does not exist in /home2/springle/public_html/includes/oracle_connection.php on line 16
+[13-Aug-2023 10:03:03 UTC] PHP Warning:  oci_connect(): ORA-12545: Connect failed because target host or object does not exist in /home2/springle/public_html/includes/oracle_connection.php on line 16
+[13-Aug-2023 10:03:08 UTC] PHP Warning:  oci_connect(): ORA-12545: Connect failed because target host or object does not exist in /home2/springle/public_html/includes/oracle_connection.php on line 16
+[13-Aug-2023 10:03:11 UTC] PHP Warning:  oci_connect(): ORA-12545: Connect failed because target host or object does not exist in /home2/springle/public_html/includes/oracle_connection.php on line 16
+[13-Aug-2023 10:12:16 UTC] PHP Warning:  oci_connect(): ORA-12545: Connect failed because target host or object does not exist in /home2/springle/public_html/includes/oracle_connection.php on line 16
+[13-Aug-2023 10:22:38 UTC] PHP Warning:  oci_connect(): ORA-12545: Connect failed because target host or object does not exist in /home2/springle/public_html/includes/oracle_connection.php on line 16
+[13-Aug-2023 10:25:40 UTC] PHP Warning:  oci_connect(): ORA-12170: TNS:Connect timeout occurred in /home2/springle/public_html/includes/oracle_connection.php on line 16
+[13-Aug-2023 11:01:23 UTC] PHP Warning:  oci_connect(): ORA-12170: TNS:Connect timeout occurred in /home2/springle/public_html/includes/oracle_connection.php on line 16
+[14-Aug-2023 09:39:21 UTC] PHP Warning:  oci_connect(): ORA-12170: TNS:Connect timeout occurred in /home2/springle/public_html/includes/oracle_connection.php on line 16
+[14-Aug-2023 09:41:18 UTC] PHP Warning:  oci_connect(): ORA-12170: TNS:Connect timeout occurred in /home2/springle/public_html/includes/oracle_connection.php on line 13
+[14-Aug-2023 09:44:29 UTC] PHP Warning:  oci_connect(): ORA-12170: TNS:Connect timeout occurred in /home2/springle/public_html/includes/oracle_connection.php on line 13
+[14-Aug-2023 09:52:11 UTC] PHP Warning:  oci_connect(): ORA-12170: TNS:Connect timeout occurred in /home2/springle/public_html/includes/oracle_connection.php on line 13
+[14-Aug-2023 09:56:16 UTC] PHP Warning:  oci_connect(): ORA-12170: TNS:Connect timeout occurred in /home2/springle/public_html/includes/oracle_connection.php on line 13
+[14-Aug-2023 09:59:08 UTC] PHP Warning:  oci_connect(): ORA-12545: Connect failed because target host or object does not exist in /home2/springle/public_html/includes/oracle_connection.php on line 13
+[14-Aug-2023 10:13:59 UTC] PHP Warning:  oci_connect(): ORA-12545: Connect failed because target host or object does not exist in /home2/springle/public_html/includes/oracle_connection.php on line 13
+[14-Aug-2023 10:14:08 UTC] PHP Warning:  oci_connect(): ORA-12545: Connect failed because target host or object does not exist in /home2/springle/public_html/includes/oracle_connection.php on line 13
+[14-Aug-2023 10:15:37 UTC] PHP Warning:  oci_connect(): ORA-12170: TNS:Connect timeout occurred in /home2/springle/public_html/includes/oracle_connection.php on line 12
+[14-Aug-2023 15:20:26 UTC] PHP Warning:  oci_connect(): ORA-12170: TNS:Connect timeout occurred in /home2/springle/public_html/includes/oracle_connection.php on line 12
+[14-Aug-2023 17:20:06 UTC] PHP Warning:  oci_connect(): ORA-12170: TNS:Connect timeout occurred in /home2/springle/public_html/includes/oracle_connection.php on line 12
+[14-Aug-2023 17:20:55 UTC] PHP Warning:  oci_connect(): ORA-12541: TNS:no listener in /home2/springle/public_html/includes/oracle_connection.php on line 12
+[14-Aug-2023 17:24:00 UTC] PHP Warning:  oci_connect(): ORA-12170: TNS:Connect timeout occurred in /home2/springle/public_html/includes/oracle_connection.php on line 12
+[14-Aug-2023 17:34:43 UTC] PHP Warning:  oci_connect(): ORA-12541: TNS:no listener in /home2/springle/public_html/includes/oracle_connection.php on line 12
+[14-Aug-2023 17:39:19 UTC] PHP Warning:  oci_connect(): ORA-12541: TNS:no listener in /home2/springle/public_html/includes/oracle_connection.php on line 12
+[14-Aug-2023 17:39:23 UTC] PHP Warning:  oci_connect(): ORA-12541: TNS:no listener in /home2/springle/public_html/includes/oracle_connection.php on line 12
+[14-Aug-2023 17:39:26 UTC] PHP Warning:  oci_connect(): ORA-12541: TNS:no listener in /home2/springle/public_html/includes/oracle_connection.php on line 12
+[15-Aug-2023 09:32:39 UTC] PHP Warning:  oci_connect(): ORA-12541: TNS:no listener in /home2/springle/public_html/includes/oracle_connection.php on line 12
+[15-Aug-2023 09:32:40 UTC] PHP Warning:  oci_connect(): ORA-12541: TNS:no listener in /home2/springle/public_html/includes/oracle_connection.php on line 12
+[15-Aug-2023 09:32:40 UTC] PHP Warning:  oci_connect(): ORA-12541: TNS:no listener in /home2/springle/public_html/includes/oracle_connection.php on line 12

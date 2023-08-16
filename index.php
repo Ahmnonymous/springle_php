@@ -85,10 +85,8 @@ session_start();
           <input id="date" name="date" value="<?php echo $formattedDate; ?>" class="input-text js-input form-control shadow-none bg-white rounded-0" type="text" disabled required>
           <label class="label" for="date" style="top: -19px">Date</label>
         </div>
-        <div class="form-field col-sm-4 mx-auto">
-          <input id="mobile" name="contact" class="input-text js-input form-control shadow-none" type="text" required>
-          <label class="label" for="mobile">Contact</label>
-        </div>
+        <div class="col-sm-4 mx-auto"></div>
+      </div>
       <div class="form-field col-sm-12 text-center">
         <input class="submit-btn btn btn-primary" type="submit" value="Save">
       </div>

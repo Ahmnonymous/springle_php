@@ -1,7 +1,7 @@
 <?php
 $db_user = 'HR';
 $db_password = 'HR';
-$db_host = '124.29.225.97:1521/orcl'; 
+$db_host = '124.29.225.97/ORC'; 
 
 $conn = oci_connect($db_user, $db_password, $db_host);
 
@@ -13,5 +13,5 @@ else {
     echo "Connected to Oracle successfully!";
 }
 
-oci_close($conn);
+oci_close($connection);
 ?>

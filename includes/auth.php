@@ -23,7 +23,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     if ($conn->query($sql) === TRUE) {
         $_SESSION['auth'] = TRUE;
-        header("location: ../index.php");
+        header("location:../index.php");
 
     } else {
         echo "Error: " . $sql . "<br>" . $conn->error;
