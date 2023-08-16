@@ -12,7 +12,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         header("Location: index.php");
     }
 
-    $sql = "SELECT * FROM users WHERE email = '$email'";
+    $sql = "SELECT * FROM country_master WHERE email = '$email'";
     $result = $conn->query($sql);
 
     if($result->num_rows === 1) {
