@@ -12,10 +12,9 @@ if (!$conn) {
     die("Connection failed: " . $error['message']);
 }
 
-echo "Connected to Oracle Database!";
+//echo "Connected to Oracle Database!";
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-//    include_once "db_ora.php"; // Include your Oracle database connection file
 
     $email = $_POST["email"];
     $password = $_POST["password"];
@@ -41,29 +40,29 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if ($result) {
         $row = oci_fetch_assoc($stmt);
         if ($row) {
-            $storedPassword = $row["PASSWORD"]; // Assuming PASSWORD is the column name
+            $storedPassword = $row["PASSWORD"]; 
             if ($password === $storedPassword) {
                 $_SESSION['auth'] = true;
                 echo "Connected to Oracle Database2!";
-                //header("Location: form.php");
-                //exit();
+                header("Location: form.php");
+                exit();
             } else {
                 $_SESSION['error_message'] = "Invalid login details";
                 echo "Connected to Oracle Databasssse!";
-                //header("Location: index.php");
-                //exit();
+                header("Location: index.php");
+                exit();
             }
         } else {
             $_SESSION['error_message'] = "Invalid login details";
             echo "Connected to Oraclewerwerr Database!";
-            //header("Location: index.php");
-            //exit();
+            header("Location: index.php");
+            exit();
         }
     } else {
         $_SESSION['error_message'] = "Error executing query";
         echo "Connected to Oracle Database!wew";
-        //header("Location: index.php");
-        //exit();
+        header("Location: index.php");
+        exit();
     }
 
     // Free the statement
