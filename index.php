@@ -17,13 +17,13 @@
   <div class="container">
     <section>
       <form method="POST" action="includes/login_auth.php" class="custom-form mx-auto mb-5 contact-form shadow">
-      <h2 class="title text-center">Springle - User Login</h2>
+      <h2 class="title text-center">Springle - Login</h2>
         <div class="form-field col-sm-12 mx-auto">
-          <input id="email" name="email" placeholder="email" class="input-text js-input form-control shadow-none rounded-0" type="email"
+          <input id="email" name="email" placeholder="Email Address" class="input-text js-input form-control shadow-none rounded-0" type="email"
             required>
         </div>
         <div class="form-field col-sm-12 mx-auto">
-          <input id="password" name="password" placeholder="password" class="input-text js-input form-control shadow-none rounded-0"
+          <input id="password" name="password" placeholder="Password" class="input-text js-input form-control shadow-none rounded-0"
             type="password" required>
         </div>
         <div class="form-field col-sm-12 text-center">
