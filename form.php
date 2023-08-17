@@ -34,14 +34,15 @@ if(isset($_SESSION['auth']))
           })
             </script>";
       unset($_SESSION['success_message']);
-      echo "<p>Welcome, " . $_SESSION['username'] . "!</p>";
     }
     ?>
     <div class="container mt-4">
   <section>
     
     <form method="POST" action="sales_ora.php" class="custom-form  mx-auto mb-5 contact-form bg-white p-5 shadow">
-    <input type="text" name="ref" value="<?php echo $_SESSION['username']; ?>">
+    <?PHP
+    echo "<H2  class=""title text-center">Welcome, " . $_SESSION['username'] . "!</H2>";
+    ?>
     <h2 class="title text-center"><b>Sale Details</b></h2>  
     <div class="row">
         <div class="form-field col-sm-4 mx-auto">
