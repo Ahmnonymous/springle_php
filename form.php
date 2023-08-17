@@ -24,6 +24,7 @@ $user = $_SESSION['username'];
 
 $stid = oci_parse($conn, $sql);
 oci_bind_by_name($stid, ':user', $user);
+
 if (!$stid) {
     $error = oci_error($conn);
     die("Error parsing SQL: " . $error['message']);
