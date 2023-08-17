@@ -15,7 +15,7 @@ if (!$conn) {
 //$usernam = $_SESSION['username'];
 
 $sql = "SELECT T.CLAINT_ID, T.NAME, T.rate, T.Bot_bal, T.pay_bal, T.mobile, t.ref_id FROM DATA_FATCH_VIEW T
-          WHERE T.active ='1' and T.REF='Javed'";
+          WHERE T.active ='1' ";
 
 $stid = oci_parse($conn, $sql);
 if (!$stid) {
