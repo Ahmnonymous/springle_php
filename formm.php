@@ -1,27 +1,15 @@
 <?php
 session_start();
-?>
 
-<!doctype html>
-<html>
+if (!isset($_SESSION['auth'])) {
+    header("Location: index.php");
+    exit;
+}
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!--link rel="stylesheet" href="js/jquery-ui.css"-->
-  <link rel="stylesheet" href="css/fstyle.css">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/11.4.24/sweetalert2.all.js"></script>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-</head>
-
-<body style="background-color: #f5f4f4;">
-<?php
-if(isset($_SESSION['auth']))
-{
-  // Database connection details
+// Database connection details
 $username = 'HR';
 $password = 'HR';
-$db = '124.29.225.97:1521/orcl'; 
+$db = '124.29.225.97:1521/orcl';
 $usernam = $_SESSION['username'];
 
 $conn = oci_connect($username, $password, $db);
@@ -37,39 +25,57 @@ $sql = "SELECT CLAINT_ID, NAME, rate, Bot_bal, pay_bal, mobile, ref_id FROM DATA
 $stid = oci_parse($conn, $sql);
 oci_bind_by_name($stid, ":usernam", $usernam);
 
-oci_execute($stid);
-
-while ($row = oci_fetch_assoc($stid)) {        
-    $customer_id = $row['CLAINT_ID'];
-    $customer_name = $row['NAME'];
-    $rate = $row['rate'];
-    $bottle_balance = $row['Bot_bal'];
-    $pay_balance = $row['pay_bal'];
-    $contact = $row['mobile'];
-    $refid = $row['ref_id'];
+if (!oci_execute($stid)) {
+    $error = oci_error($stid);
+    die("Error executing query: " . $error['message']);
+}
 ?>
-  <div class="container mt-4">
-    <?php
-    if (isset($_SESSION['success_message'])) {
-      $message = $_SESSION['success_message'];
-      echo "<script>
-      Swal.fire({
-        icon: 'success',
-        title: 'Success',
-        text: '$message',
-        customClass: {
-          confirmButton: 'bg-success shadow-none',
-      }
-          })
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!--link rel="stylesheet" href="js/jquery-ui.css"-->
+  <link rel="stylesheet" href="css/fstyle.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/11.4.24/sweetalert2.all.js"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+<body style="background-color: #f5f4f4;">
+    <div class="container mt-4">
+        <?php
+        if (isset($_SESSION['success_message'])) {
+            $message = $_SESSION['success_message'];
+            echo "<script>
+            Swal.fire({
+                icon: 'success',
+                title: 'Success',
+                text: '$message',
+                customClass: {
+                    confirmButton: 'bg-success shadow-none',
+                }
+            });
             </script>";
-      unset($_SESSION['success_message']);
-    }
-    ?>
-  
-  <div class="container mt-4">
-    <section>  
-    <form method="POST" action="sales_ora.php" class="custom-form  mx-auto mb-5 contact-form bg-white p-5 shadow">
-    <?php $username = $_SESSION['username'];echo "<h2 class=\"title text-center\">Welcome, $username!</h2>";?>
+            unset($_SESSION['success_message']);
+        }
+        ?>
+
+        <div class="container mt-4">
+            <section>
+                <form method="POST" action="sales_ora.php" class="custom-form mx-auto mb-5 contact-form bg-white p-5 shadow">
+                    <?php
+                    while ($row = oci_fetch_assoc($stid)) {
+                        $customer_id = $row['CLAINT_ID'];
+                        $customer_name = $row['NAME'];
+                        $rate = $row['rate'];
+                        $bottle_balance = $row['Bot_bal'];
+                        $pay_balance = $row['pay_bal'];
+                        $contact = $row['mobile'];
+                        $refid = $row['ref_id'];
+                        echo "<h2 class=\"title text-center\">Welcome, $usernam!</h2>";
+                        echo "<h2 class=\"title text-center\"><b>Sale Details</b></h2>";
+                        ?>
+                        <?php $username = $_SESSION['username'];echo "<h2 class=\"title text-center\">Welcome, $username!</h2>";?>
     <h2 class="title text-center"><b>Sale Details</b></h2>  
     <div class="row">
         <div class="form-field col-sm-4 mx-auto">
@@ -144,40 +150,17 @@ while ($row = oci_fetch_assoc($stid)) {
       <div class="form-field col-sm-12 text-center">
     <input class="submit-btn btn btn-primary" type="submit" value="Save">
       </div>
-    </form>
-  </section>
-</div>
-<?php
-    }} else {
-        header("Location:index.php");
-    }
-?>
-
-  </div>
-  <script src="js/jquery.js"></script>
+                        <?php
+                    }
+                    oci_free_statement($stid);
+                    oci_close($conn);
+                    ?>
+                </form>
+            </section>
+        </div>
+    </div>
+    <script src="js/jquery.js"></script>
   <script src="js/jquery-ui.js"></script>
-  <script>
-    // Event listener for the customer name dropdown
-    $('#customer_name').on('change', function () {
-        var selectedName = $(this).val();
-
-        // Loop through the fetched data to find the selected customer's details
-        <?php oci_execute($stid); // Make sure to execute the statement ?>
-        <?php while ($row = oci_fetch_assoc($stid)) { ?>
-            if ("<?php echo $row['NAME']; ?>" === selectedName) {
-                $('#customer_id').val("<?php echo $row['CLAINT_ID']; ?>");
-                $('#rate').val("<?php echo $row['rate']; ?>");
-                $('#bottle_balance').val("<?php echo $row['Bot_bal']; ?>");
-                $('#pay_balance').val("<?php echo $row['pay_bal']; ?>");
-                $('#contact').val("<?php echo $row['mobile']; ?>");
-                // You can add more fields as needed
-                break;
-            }
-        <?php } ?>
-    });
-</script>
-
-
   <script>
     $('.js-input').keyup(function() {
       if ($(this).val()) {
@@ -195,6 +178,6 @@ while ($row = oci_fetch_assoc($stid)) {
   </script>
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
-</body>
 
+</body>
 </html>
