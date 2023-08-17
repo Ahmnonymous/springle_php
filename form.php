@@ -48,7 +48,7 @@ if(isset($_SESSION['auth']))
           <!--label class="label" for="customer_id">Cus ID</label-->
         </div>
         <div class="form-field col-sm-4 mx-auto">
-          <input id="name" name="customer_name" placeholder="Customer Name" class="input-text js-input form-control shadow-none rounded-0" type="text" required>
+          <input id="customer_name" name="customer_name" placeholder="Customer Name" class="input-text js-input form-control shadow-none rounded-0" type="text" required>
           <!--label class="label" for="name">Customer's Name</label-->
         </div>
       </div>
@@ -66,7 +66,7 @@ if(isset($_SESSION['auth']))
       </div>
       <div class="row">
        <div class="form-field col-sm-4 mx-auto">
-          <input id="BotRecord" name="bot_rec" placeholder="Bot Record" class="input-text js-input form-control shadow-none rounded-0" type="number" required>
+          <input id="bot_rec" name="bot_rec" placeholder="Bot Received" class="input-text js-input form-control shadow-none rounded-0" type="number" required>
           <!--label class="label" for="BotRecord">Bot Record</label-->
         </div>
         
@@ -92,7 +92,7 @@ if(isset($_SESSION['auth']))
         </div>
         
            <div class="form-field col-sm-4 mx-auto">
-          <input id="mobile" name="contact" placeholder="Contact" class="input-text js-input form-control shadow-none" type="text" required>
+          <input id="contact" name="contact" placeholder="Contact" class="input-text js-input form-control shadow-none" type="text" required>
           <!--label class="label" for="mobile">Contact</label-->
         </div>
       </div>
@@ -105,6 +105,7 @@ if(isset($_SESSION['auth']))
       </div>
       <div class="form-field col-sm-12 text-center">
         <input class="submit-btn btn btn-primary" type="submit" value="Save">
+        <div class="col-sm-4 mx-auto"></div>
       </div>
     </form>
   </section>

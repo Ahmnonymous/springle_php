@@ -19,7 +19,7 @@
       <form method="POST" action="login_ora.php" class="custom-form mx-auto mb-5 contact-form shadow">
       <h2 class="title text-center"><b>Springle - User Login</b></h2>
         <div class="form-field col-sm-12 mx-auto">
-          <input id="email" name="email" placeholder="Email Address" class="input-text js-input form-control shadow-none rounded-0" type="email"
+          <input id="email" name="email" placeholder="Email address" class="input-text js-input form-control shadow-none rounded-0" type="email"
             required>
         </div>
         <div class="form-field col-sm-12 mx-auto">
