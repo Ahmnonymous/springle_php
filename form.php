@@ -19,7 +19,9 @@ $username = $_SESSION['username'];
 // Define the SQL query
 $sql = "SELECT T.CLAINT_ID, T.NAME, T.rate, T.Bot_bal, T.pay_bal, T.mobile, t.ref_id 
         FROM DATA_FATCH_VIEW T
-        WHERE T.active = '1' AND t.ref = :username";
+        WHERE T.active = '1' AND t.ref = :username
+        ORDER BY T.NAME ASC";
+
 
 // Prepare the SQL statement
 $stid = oci_parse($conn, $sql);
