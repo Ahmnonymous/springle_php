@@ -2,24 +2,24 @@
 session_start();
 
 // Database connection details
-$username = 'HR';
+$user = 'HR';
 $password = 'HR';
 $db = '124.29.225.97:1521/orcl';
 
 // Establish a database connection
-$conn = oci_connect($username, $password, $db);
+$conn = oci_connect($user, $password, $db);
 if (!$conn) {
     $error = oci_error();
     die("Connection failed: " . $error['message']);
 }
 
 // Retrieve the logged-in user's username
-$user = $_SESSION['username'];
+$username = $_SESSION['username'];
 
 // Define the SQL query
 $sql = "SELECT T.CLAINT_ID, T.NAME, T.rate, T.Bot_bal, T.pay_bal, T.mobile, t.ref_id 
         FROM DATA_FATCH_VIEW T
-        WHERE T.active = '1' AND t.ref = :user";
+        WHERE T.active = '1' AND t.ref = :username";
 
 // Prepare the SQL statement
 $stid = oci_parse($conn, $sql);
@@ -29,7 +29,7 @@ if (!$stid) {
 }
 
 // Bind the user parameter
-oci_bind_by_name($stid, ':user', $user);
+oci_bind_by_name($stid, ':username', $username);
 
 // Execute the statement
 $result = oci_execute($stid);
