@@ -54,35 +54,51 @@ while ($row = oci_fetch_assoc($stid)) {
 <form method="POST" action="sales_ora.php" class="custom-form mx-auto mb-5 contact-form bg-white p-5 shadow">
     <h2 class="title text-center"><b>Sale Details</b></h2>
 
-    <div class="form-field col-sm-4 mx-auto">
-        <select id="customer_name" name="customer_name" class="input-text js-input form-control shadow-none rounded-0" required>
-            <option value="" selected disabled>Select Customer Name</option>
-            <?php
-            foreach ($dataArray as $row) {
-                echo "<option value='" . $row['NAME'] . "'>" . $row['NAME'] . "</option>";
-            }
-            ?>
-        </select>
+    <div class="row">
+        <div class="form-field col-sm-4 mx-auto">
+            <select id="customer_name" name="customer_name" class="input-text js-input form-control shadow-none rounded-0" required>
+                <option value="" selected disabled>Select Customer Name</option>
+                <?php
+                foreach ($dataArray as $row) {
+                    echo "<option value='" . $row['NAME'] . "'>" . $row['NAME'] . "</option>";
+                }
+                ?>
+            </select>
+        </div>
+        
+        <div class="form-field col-sm-4 mx-auto">
+            <input id="customer_id" name="customer_id" placeholder="Customer ID" class="input-text js-input form-control shadow-none rounded-0" type="text" required>
+        </div>
+
+        <div class="form-field col-sm-4 mx-auto">
+            <input id="date" name="date" placeholder="Date" class="input-text js-input form-control shadow-none bg-white rounded-0" type="date">
+        </div>
     </div>
 
-    <!-- Fields to be populated based on selected customer -->
-    <div class="form-field col-sm-4 mx-auto">
-        <input id="customer_id" name="customer_id" placeholder="Customer ID" class="input-text js-input form-control shadow-none rounded-0" type="text" required>
+    <div class="row">
+        <div class="form-field col-sm-4 mx-auto">
+            <input id="rate" name="rate" placeholder="Rate" class="input-text js-input form-control shadow-none rounded-0" type="number" required>
+        </div>
+        
+        <div class="form-field col-sm-4 mx-auto">
+            <input id="bot_balance" name="bot_balance" placeholder="Bot Balance" class="input-text js-input form-control shadow-none rounded-0" type="number" required>
+        </div>
+        <div class="form-field col-sm-4 mx-auto">
+          <input id="pay_received" name="pay_received" placeholder="Payment Received" class="input-text js-input form-control shadow-none" type="number" required>
+        </div>
+
     </div>
-    <div class="form-field col-sm-4 mx-auto">
-        <input id="rate" name="rate" placeholder="Rate" class="input-text js-input form-control shadow-none rounded-0" type="number" required>
-    </div>
-    <div class="form-field col-sm-4 mx-auto">
-        <input id="bot_balance" name="bot_balance" placeholder="Bot Balance" class="input-text js-input form-control shadow-none rounded-0" type="number" required>
-    </div>
-    <div class="form-field col-sm-4 mx-auto">
-        <input id="pay_balance" name="pay_balance" placeholder="Pay Balance" class="input-text js-input form-control shadow-none rounded-0" type="number" required>
-    </div>
-    <div class="form-field col-sm-4 mx-auto">
-        <input id="mobile" name="mobile" placeholder="Mobile" class="input-text js-input form-control shadow-none" type="text" required>
-    </div>
-    <div class="form-field col-sm-4 mx-auto">
-        <input id="ref_id" name="ref_id" placeholder="Ref ID" class="input-text js-input form-control shadow-none" type="text" required>
+
+    <div class="row">
+        <div class="form-field col-sm-4 mx-auto">
+                <input id="pay_balance" name="pay_balance" placeholder="Pay Balance" class="input-text js-input form-control shadow-none rounded-0" type="number" required>
+        </div>
+        <div class="form-field col-sm-4 mx-auto">
+            <input id="mobile" name="mobile" placeholder="Mobile" class="input-text js-input form-control shadow-none" type="text" required>
+        </div>
+        <div class="form-field col-sm-4 mx-auto">
+            <input id="ref_id" name="ref_id" placeholder="Ref ID" class="input-text js-input form-control shadow-none" type="text" required>
+        </div>
     </div>
 
     <div class="form-field col-sm-12 text-center">

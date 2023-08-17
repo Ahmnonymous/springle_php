@@ -137,7 +137,6 @@ while ($row = oci_fetch_assoc($stid)) {
       <div class="row">
         <div class="form-field col-sm-4 mx-auto">
           <input id="date" name="date" placeholder="Date" class="input-text js-input form-control shadow-none bg-white rounded-0" type="date">
-          <!--label class="label" for="date" style="top: -19px">Date</label-->
         </div>
           <div class="col-sm-4 mx-auto"></div>
       </div>
