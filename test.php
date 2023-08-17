@@ -12,14 +12,14 @@ if (!$conn) {
     die("Connection failed: " . $error['message']);
 }
 
-$usernam = $_SESSION['username'];
+//$usernam = $_SESSION['username'];
 
 $sql = "SELECT T.CLAINT_ID, T.NAME, T.rate, T.Bot_bal, T.pay_bal, T.mobile, t.ref_id FROM DATA_FATCH_VIEW T
           WHERE T.active ='1';
           --AND T.ref = :usernam";
 
 $stid = oci_parse($conn, $sql);
-oci_bind_by_name($stid, ":usernam", $usernam);
+//oci_bind_by_name($stid, ":usernam", $usernam);
 
 oci_execute($stid);
 ?>
