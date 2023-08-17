@@ -18,9 +18,17 @@ $sql = "SELECT T.CLAINT_ID, T.NAME, T.rate, T.Bot_bal, T.pay_bal, T.mobile, t.re
           WHERE T.active ='1'";
 
 $stid = oci_parse($conn, $sql);
-// oci_bind_by_name($stid, ":usernam", $usernam);
+if (!$stid) {
+    $error = oci_error($conn);
+    die("Error parsing SQL: " . $error['message']);
+}
 
 oci_execute($stid);
+if (!$stid) {
+    $error = oci_error($conn);
+    die("Error executing SQL: " . $error['message']);
+}
+
 ?>
 
 <!-- Echo all fields for debugging purposes -->
