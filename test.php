@@ -44,6 +44,7 @@ if (!$stid) {
     </tr>
     <?php
     while ($row = oci_fetch_assoc($stid)) {
+        var_dump($row); 
         echo "<tr>";
         echo "<td>" . $row['CLAINT_ID'] . "</td>";
         echo "<td>" . $row['NAME'] . "</td>";
