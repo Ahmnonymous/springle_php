@@ -151,15 +151,12 @@ while ($row = oci_fetch_assoc($stid)) {
     }} else {
         header("Location:index.php");
     }
-} else {
-    header("Location:index.php");
-}
 ?>
 
   </div>
   <script src="js/jquery.js"></script>
   <script src="js/jquery-ui.js"></script>
-<script>
+  <script>
     // Event listener for the customer name dropdown
     $('#customer_name').on('change', function () {
         var selectedName = $(this).val();
