@@ -117,8 +117,8 @@ else{
 ?>
 
   </div>
-  <!--script src="js/jquery.js"></script-->
-  <!--script src="js/jquery-ui.js"></script-->
+  <script src="js/jquery.js"></script>
+  <script src="js/jquery-ui.js"></script>
   <script>
     $('.js-input').keyup(function() {
       if ($(this).val()) {
