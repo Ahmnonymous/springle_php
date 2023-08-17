@@ -42,7 +42,7 @@ if(isset($_SESSION['auth']))
     <form method="POST" action="sales_ora.php" class="custom-form  mx-auto mb-5 contact-form bg-white p-5 shadow">
     <?php
     $username = $_SESSION['username'];
-    echo "<h2 class=\"title text-center\">Welcome <b>$username</b></h2>";
+    echo "<h2 class=\"title text-center\">Welcome, $username!</h2>";
 ?>
     <h2 class="title text-center"><b>Sale Details</b></h2>  
     <div class="row">
