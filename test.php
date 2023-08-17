@@ -36,7 +36,20 @@ while ($row = oci_fetch_assoc($stid)) {
 }
 ?>
 
-<body>
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!--link rel="stylesheet" href="js/jquery-ui.css"-->
+  <link rel="stylesheet" href="css/fstyle.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/11.4.24/sweetalert2.all.js"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+
+<body style="background-color: #f5f4f4;">
+
 
 <form method="POST" action="sales_ora.php" class="custom-form mx-auto mb-5 contact-form bg-white p-5 shadow">
     <h2 class="title text-center"><b>Sale Details</b></h2>
@@ -96,5 +109,23 @@ while ($row = oci_fetch_assoc($stid)) {
         }
     });
 </script>
+<script>
+    $('.js-input').keyup(function() {
+      if ($(this).val()) {
+        $(this).addClass('not-empty');
+      } else {
+        $(this).removeClass('not-empty');
+      }
+    });
+    $("#quantity, #rate").on('input', function() {
+            var qty = parseFloat($("#quantity").val()) || 0;
+            var rate = parseFloat($("#rate").val()) || 0; 
+            var amount = (qty * rate);
+            $("#amount").val(amount.toFixed(2));
+        });
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
 
 </body>
+</html>
