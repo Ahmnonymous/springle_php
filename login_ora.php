@@ -41,7 +41,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $row = oci_fetch_assoc($stmt);
         if ($row) {
             $storedPassword = $row["PASSWORD"]; 
-            $username = $row["USERNAME"];
+            $username = $row["COUNTRY_NAME"];
             if ($password === $storedPassword) {
                 $_SESSION['auth'] = true;
                 //echo "Connected to Oracle Database2!";
