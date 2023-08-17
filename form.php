@@ -157,7 +157,7 @@ if(isset($_SESSION['auth']))
         </div>
     
         <div class="form-field col-sm-4 mx-auto">
-            <input id="ref_id" name="ref_id" placeholder="Reference" class="input-text js-input form-control shadow-none bg-white rounded-0" type="text" disabled required>
+        <input id="ref_id" name="ref_id" placeholder="Reference ID" class="input-text js-input form-control shadow-none" type="text" required>
         </div>
     </div>
 
