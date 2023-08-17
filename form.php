@@ -108,7 +108,6 @@ if(isset($_SESSION['auth']))
       </div>
       <div class="form-field col-sm-12 text-center">
     <input class="submit-btn btn btn-primary" type="submit" value="Save">
-      <a href="view_sales.php" class="btn btn-secondary">View Sales</a>
       </div>
     </form>
   </section>
