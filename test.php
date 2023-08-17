@@ -19,7 +19,7 @@ $sql = "SELECT T.CLAINT_ID, T.NAME, T.rate, T.Bot_bal, T.pay_bal, T.mobile, t.re
           --AND T.ref = :usernam";
 
 $stid = oci_parse($conn, $sql);
---oci_bind_by_name($stid, ":usernam", $usernam);
+// oci_bind_by_name($stid, ":usernam", $usernam);
 
 oci_execute($stid);
 ?>
