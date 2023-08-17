@@ -41,7 +41,7 @@ if(isset($_SESSION['auth']))
   <section>
     
     <form method="POST" action="sales_ora.php" class="custom-form  mx-auto mb-5 contact-form bg-white p-5 shadow">
-    <h2 class="title text-center">Add Sale Details</h2>  
+    <h2 class="title text-center"><b>Sale Details</b></h2>  
     <div class="row">
         <div class="form-field col-sm-4 mx-auto">
           <input id="customer_id" name="customer_id" placeholder="Customer ID" class="input-text js-input form-control shadow-none rounded-0" type="text" required>
