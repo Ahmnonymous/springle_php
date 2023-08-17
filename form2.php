@@ -18,6 +18,26 @@ session_start();
 <?php
 if(isset($_SESSION['auth']))
 {
+  // Database connection details
+$username = 'HR';
+$password = 'HR';
+$db = '124.29.225.97:1521/orcl'; 
+$username = $_SESSION['username'];
+
+$conn = oci_connect($username, $password, $db);
+if (!$conn) {
+    $error = oci_error();
+    die("Connection failed: " . $error['message']);
+}
+
+  $sql = "SELECT T.CLAINT_ID, T.NAME, T.rate, T.Bot_bal, T.pay_bal, T.mobile, t.ref_id FROM DATA_FATCH_VIEW T
+          WHERE T.active ='1'
+          AND T.ref =$username";
+
+  $result = $conn->query($sql);
+
+  if ($result->num_rows > 0) {
+    while($row = $result->fetch_assoc()) {
 ?>
   <div class="container mt-4">
     <?php
@@ -109,11 +129,13 @@ if(isset($_SESSION['auth']))
     </form>
   </section>
 </div>
-<?php }
-else{
+<?php
+    }} else {
+        header("Location:index.php");
+    }
+} else {
     header("Location:index.php");
 }
-
 ?>
 
   </div>
