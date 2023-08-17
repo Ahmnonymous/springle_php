@@ -32,7 +32,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     // Oracle-specific: Construct the SQL statement
     $sql = "INSERT INTO SALE_DETAIL (book_id,sal_id, customer_name, bot_issue, bottle_recived, rate, amount, bot_balance, pay_recived, pay_balance, date)
-    VALUES (2277,:sal_id, :customer_name, :quantity, :bot_rec, :rate, :amount, :bot_balance, :pay_received, :pay_balance, TO_DATE(:formattedDate, 'YYYY-MM-DD'))";
+    VALUES (2277,:sal_id, :customer_name, :quantity, :bot_rec, :rate, :amount, :bot_balance, :pay_received, :pay_balance, :formattedDate)";
 
     // Prepare the statement
     $stmt = oci_parse($conn, $sql);
