@@ -3,7 +3,7 @@ session_start();
 ?>
 
 <?php
-// fetch_data.php
+
 
 // Database connection details
 $username = 'HR';
@@ -16,12 +16,14 @@ if (!$conn) {
     die("Connection failed: " . $error['message']);
 }
 
-//$usernam = $_SESSION['username'];
+$user = $_SESSION['username'];
 
-$sql = "SELECT T.CLAINT_ID, T.NAME, T.rate, T.Bot_bal, T.pay_bal, T.mobile, t.ref_id FROM DATA_FATCH_VIEW T
-          WHERE T.active ='1' ";
+    $sql = "SELECT T.CLAINT_ID, T.NAME, T.rate, T.Bot_bal, T.pay_bal, T.mobile, t.ref_id 
+            FROM DATA_FATCH_VIEW T
+            WHERE T.active = '1' AND t.ref = :user";
 
 $stid = oci_parse($conn, $sql);
+oci_bind_by_name($stid, ':user', $user);
 if (!$stid) {
     $error = oci_error($conn);
     die("Error parsing SQL: " . $error['message']);
@@ -38,6 +40,7 @@ $dataArray = array();
 while ($row = oci_fetch_assoc($stid)) {
     $dataArray[] = $row;
 }
+
 ?>
 
 <!doctype html>
@@ -138,7 +141,7 @@ if(isset($_SESSION['auth']))
                 <input id="pay_balance" name="pay_balance" placeholder="Pay Balance" class="input-text js-input form-control shadow-none rounded-0" type="number" required>
         </div>
         <div class="form-field col-sm-4 mx-auto">
-            <input id="mobile" name="mobile" placeholder="Mobile" class="input-text js-input form-control shadow-none" type="text" required>
+            <input id="contact" name="contact" placeholder="Mobile" class="input-text js-input form-control shadow-none" type="text" required>
         </div>
     </div>
 
