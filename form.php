@@ -41,7 +41,7 @@ if(isset($_SESSION['auth']))
   <section>
     
     <form method="POST" action="sales_ora.php" class="custom-form  mx-auto mb-5 contact-form bg-white p-5 shadow">
-    <input type="hidden" name="ref" value="<?php echo $_SESSION['username']; ?>">
+    <input type="text" name="ref" value="<?php echo $_SESSION['username']; ?>">
     <h2 class="title text-center"><b>Sale Details</b></h2>  
     <div class="row">
         <div class="form-field col-sm-4 mx-auto">
