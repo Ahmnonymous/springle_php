@@ -1,4 +1,8 @@
 <?php
+session_start();
+?>
+
+<?php
 // fetch_data.php
 
 // Database connection details
