@@ -42,11 +42,11 @@ oci_execute($stid);
 while ($row = oci_fetch_assoc($stid)) {        
     $customer_id = $row['CLAINT_ID'];
     $customer_name = $row['NAME'];
-    $rate = $row['rate'] ?? '';
-    $bottle_balance = $row['Bot_bal'] ?? '';
-    $pay_balance = $row['pay_bal'] ?? '';
-    $contact = $row['mobile'] ?? '';
-    $refid = $row['ref_id'] ?? '';
+    $rate = $row['RATE'] ?? '';
+    $bottle_balance = $row['BOT_BAL'] ?? '';
+    $pay_balance = $row['PAY_BAL'] ?? '';
+    $contact = $row['MOBILE'] ?? '';
+    $refid = $row['REF_ID'] ?? '';
 ?>
   <div class="container mt-4">
     <?php
