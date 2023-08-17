@@ -50,9 +50,34 @@ while ($row = oci_fetch_assoc($stid)) {
 
 <body style="background-color: #f5f4f4;">
 
+<?php
+if(isset($_SESSION['auth']))
+{
+?>
+  <div class="container mt-4">
+    <?php
+    if (isset($_SESSION['success_message'])) {
+      $message = $_SESSION['success_message'];
+      echo "<script>
+      Swal.fire({
+        icon: 'success',
+        title: 'Success',
+        text: '$message',
+        customClass: {
+          confirmButton: 'bg-success shadow-none',
+      }
+          })
+            </script>";
+      unset($_SESSION['success_message']);
+    }
+    ?>
 
-<form method="POST" action="sales_ora.php" class="custom-form mx-auto mb-5 contact-form bg-white p-5 shadow">
-    <h2 class="title text-center"><b>Sale Details</b></h2>
+<div class="container mt-4">
+</section>
+<form method="POST" action="sales_ora.php" class="custom-form  mx-auto mb-5 contact-form bg-white p-5 shadow">
+    <?php $username = $_SESSION['username'];echo "<h2 class=\"title text-center\">Welcome, $username!</h2>";?>
+    <h2 class="title text-center"><b>Sale Details</b></h2>  
+
 
     <div class="row">
         <div class="form-field col-sm-4 mx-auto">
@@ -126,8 +151,20 @@ while ($row = oci_fetch_assoc($stid)) {
     <div class="form-field col-sm-12 text-center">
         <input class="submit-btn btn btn-primary" type="submit" value="Save">
     </div>
-</form>
+    </form>
+    </section>
+</div>
 
+<?php
+    }else {
+        header("Location:index.php");
+    }
+?>
+
+  </div>
+
+<script src="js/jquery.js"></script>
+  <script src="js/jquery-ui.js"></script>
 <script>
     // Event listener for the customer name dropdown
     document.getElementById('customer_name').addEventListener('change', function() {
