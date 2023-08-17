@@ -157,7 +157,7 @@ if(isset($_SESSION['auth']))
         </div>
     
         <div class="form-field col-sm-4 mx-auto">
-            <input id="ref_id" name="ref_id" placeholder="Ref ID" class="input-text js-input form-control shadow-none" type="text" required>
+            <input id="ref_id" name="ref_id" placeholder="Reference" class="input-text js-input form-control shadow-none" type="text" disabled required>
         </div>
     </div>
 
@@ -190,7 +190,7 @@ if(isset($_SESSION['auth']))
                 document.getElementById('rate').value = dataArray[i]['RATE'];
                 document.getElementById('bot_balance').value = dataArray[i]['BOT_BAL'];
                 document.getElementById('pay_balance').value = dataArray[i]['PAY_BAL'];
-                document.getElementById('mobile').value = dataArray[i]['MOBILE'];
+                document.getElementById('contact').value = dataArray[i]['MOBILE'];
                 document.getElementById('ref_id').value = dataArray[i]['REF_ID'];
                 break;
             }
