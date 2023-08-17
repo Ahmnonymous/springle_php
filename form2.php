@@ -30,15 +30,17 @@ if (!$conn) {
     die("Connection failed: " . $error['message']);
 }
 
-  $sql = "SELECT T.CLAINT_ID, T.NAME, T.rate, T.Bot_bal, T.pay_bal, T.mobile, t.ref_id FROM DATA_FATCH_VIEW T
+$sql = "SELECT T.CLAINT_ID, T.NAME, T.rate, T.Bot_bal, T.pay_bal, T.mobile, t.ref_id FROM DATA_FATCH_VIEW T
           WHERE T.active ='1'
-          AND T.ref =$usernam";
+          AND T.ref = :usernam";
 
-  $result = $conn->query($sql);
+$stid = oci_parse($conn, $sql);
+oci_bind_by_name($stid, ":usernam", $usernam);
 
-  if ($result->num_rows > 0) {
-    while($row = $result->fetch_assoc()) {
-        $customer_id = $row['CLAINT_ID'];
+oci_execute($stid);
+
+while ($row = oci_fetch_assoc($stid)) {        
+    $customer_id = $row['CLAINT_ID'];
     $customer_name = $row['NAME'];
     $rate = $row['rate'];
     $bottle_balance = $row['Bot_bal'];
@@ -157,14 +159,14 @@ if (!$conn) {
   </div>
   <script src="js/jquery.js"></script>
   <script src="js/jquery-ui.js"></script>
-  <script>
+<script>
     // Event listener for the customer name dropdown
     $('#customer_name').on('change', function () {
         var selectedName = $(this).val();
 
         // Loop through the fetched data to find the selected customer's details
-        <?php mysqli_data_seek($result, 0); // Reset data pointer ?>
-        <?php while ($row = $result->fetch_assoc()) { ?>
+        <?php oci_execute($stid); // Make sure to execute the statement ?>
+        <?php while ($row = oci_fetch_assoc($stid)) { ?>
             if ("<?php echo $row['NAME']; ?>" === selectedName) {
                 $('#customer_id').val("<?php echo $row['CLAINT_ID']; ?>");
                 $('#rate').val("<?php echo $row['rate']; ?>");
@@ -177,6 +179,7 @@ if (!$conn) {
         <?php } ?>
     });
 </script>
+
 
   <script>
     $('.js-input').keyup(function() {
