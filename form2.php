@@ -22,7 +22,7 @@ if(isset($_SESSION['auth']))
 $username = 'HR';
 $password = 'HR';
 $db = '124.29.225.97:1521/orcl'; 
-$username = $_SESSION['username'];
+$usernam = $_SESSION['username'];
 
 $conn = oci_connect($username, $password, $db);
 if (!$conn) {
@@ -32,12 +32,19 @@ if (!$conn) {
 
   $sql = "SELECT T.CLAINT_ID, T.NAME, T.rate, T.Bot_bal, T.pay_bal, T.mobile, t.ref_id FROM DATA_FATCH_VIEW T
           WHERE T.active ='1'
-          AND T.ref =$username";
+          AND T.ref =$usernam";
 
   $result = $conn->query($sql);
 
   if ($result->num_rows > 0) {
     while($row = $result->fetch_assoc()) {
+        $customer_id = $row['CLAINT_ID'];
+    $customer_name = $row['NAME'];
+    $rate = $row['rate'];
+    $bottle_balance = $row['Bot_bal'];
+    $pay_balance = $row['pay_bal'];
+    $contact = $row['mobile'];
+    $refid = $row['ref_id'];
 ?>
   <div class="container mt-4">
     <?php
@@ -67,10 +74,19 @@ if (!$conn) {
           <input id="customer_id" name="customer_id" placeholder="Customer ID" class="input-text js-input form-control shadow-none rounded-0" type="text" required>
           <!--label class="label" for="customer_id">Cus ID</label-->
         </div>
+        <!-- Replace the existing "Customer Name" input field -->
         <div class="form-field col-sm-4 mx-auto">
-          <input id="customer_name" name="customer_name" placeholder="Customer Name" class="input-text js-input form-control shadow-none rounded-0" type="text" required>
-          <!--label class="label" for="name">Customer's Name</label-->
+            <select id="customer_name" name="customer_name" class="input-text js-input form-control shadow-none rounded-0" required>
+                <option value="" selected disabled>Select Customer Name</option>
+                <?php
+                while ($row = $result->fetch_assoc()) {
+                    echo "<option value='" . $row['NAME'] . "'>" . $row['NAME'] . "</option>";
+                }
+                ?>
+            </select>
+            <!--label class="label" for="name">Customer's Name</label-->
         </div>
+
       </div>
       <div class="row">
           
@@ -139,8 +155,29 @@ if (!$conn) {
 ?>
 
   </div>
-  <!--script src="js/jquery.js"></script-->
-  <!--script src="js/jquery-ui.js"></script-->
+  <script src="js/jquery.js"></script>
+  <script src="js/jquery-ui.js"></script>
+  <script>
+    // Event listener for the customer name dropdown
+    $('#customer_name').on('change', function () {
+        var selectedName = $(this).val();
+
+        // Loop through the fetched data to find the selected customer's details
+        <?php mysqli_data_seek($result, 0); // Reset data pointer ?>
+        <?php while ($row = $result->fetch_assoc()) { ?>
+            if ("<?php echo $row['NAME']; ?>" === selectedName) {
+                $('#customer_id').val("<?php echo $row['CLAINT_ID']; ?>");
+                $('#rate').val("<?php echo $row['rate']; ?>");
+                $('#bottle_balance').val("<?php echo $row['Bot_bal']; ?>");
+                $('#pay_balance').val("<?php echo $row['pay_bal']; ?>");
+                $('#contact').val("<?php echo $row['mobile']; ?>");
+                // You can add more fields as needed
+                break;
+            }
+        <?php } ?>
+    });
+</script>
+
   <script>
     $('.js-input').keyup(function() {
       if ($(this).val()) {
