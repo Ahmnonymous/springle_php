@@ -29,7 +29,13 @@ if (!$stid) {
     die("Error executing SQL: " . $error['message']);
 }
 
+// Fetch all rows and store in an array
+$dataArray = array();
+while ($row = oci_fetch_assoc($stid)) {
+    $dataArray[] = $row;
+}
 ?>
+
 <body>
 
 <form method="POST" action="sales_ora.php" class="custom-form mx-auto mb-5 contact-form bg-white p-5 shadow">
@@ -39,7 +45,7 @@ if (!$stid) {
         <select id="customer_name" name="customer_name" class="input-text js-input form-control shadow-none rounded-0" required>
             <option value="" selected disabled>Select Customer Name</option>
             <?php
-            while ($row = oci_fetch_assoc($stid)) {
+            foreach ($dataArray as $row) {
                 echo "<option value='" . $row['NAME'] . "'>" . $row['NAME'] . "</option>";
             }
             ?>
@@ -76,18 +82,18 @@ if (!$stid) {
     document.getElementById('customer_name').addEventListener('change', function() {
         var selectedName = this.value;
 
-        <?php oci_execute($stid); ?>
-        <?php while ($row = oci_fetch_assoc($stid)) { ?>
-            if ("<?php echo $row['NAME']; ?>" === selectedName) {
-                document.getElementById('customer_id').value = "<?php echo $row['CLAINT_ID']; ?>";
-                document.getElementById('rate').value = "<?php echo $row['rate']; ?>";
-                document.getElementById('bot_balance').value = "<?php echo $row['Bot_bal']; ?>";
-                document.getElementById('pay_balance').value = "<?php echo $row['pay_bal']; ?>";
-                document.getElementById('mobile').value = "<?php echo $row['mobile']; ?>";
-                document.getElementById('ref_id').value = "<?php echo $row['ref_id']; ?>";
+        var dataArray = <?php echo json_encode($dataArray); ?>;
+        for (var i = 0; i < dataArray.length; i++) {
+            if (dataArray[i]['NAME'] === selectedName) {
+                document.getElementById('customer_id').value = dataArray[i]['CLAINT_ID'];
+                document.getElementById('rate').value = dataArray[i]['RATE'];
+                document.getElementById('bot_balance').value = dataArray[i]['BOT_BAL'];
+                document.getElementById('pay_balance').value = dataArray[i]['PAY_BAL'];
+                document.getElementById('mobile').value = dataArray[i]['MOBILE'];
+                document.getElementById('ref_id').value = dataArray[i]['REF_ID'];
                 break;
             }
-        <?php } ?>
+        }
     });
 </script>
 
