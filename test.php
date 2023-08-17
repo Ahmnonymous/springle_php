@@ -44,15 +44,14 @@ if (!$stid) {
     </tr>
     <?php
     while ($row = oci_fetch_assoc($stid)) {
-        var_dump($row); 
         echo "<tr>";
         echo "<td>" . $row['CLAINT_ID'] . "</td>";
         echo "<td>" . $row['NAME'] . "</td>";
-        echo "<td>" . $row['rate'] . "</td>";
-        echo "<td>" . $row['Bot_bal'] . "</td>";
-        echo "<td>" . $row['pay_bal'] . "</td>";
-        echo "<td>" . $row['mobile'] . "</td>";
-        echo "<td>" . $row['ref_id'] . "</td>";
+        echo "<td>" . $row['RATE'] . "</td>";  // Use uppercase for RATE
+        echo "<td>" . $row['BOT_BAL'] . "</td>";  // Use uppercase for BOT_BAL
+        echo "<td>" . $row['PAY_BAL'] . "</td>";  // Use uppercase for PAY_BAL
+        echo "<td>" . $row['MOBILE'] . "</td>";  // Use uppercase for MOBILE
+        echo "<td>" . $row['REF_ID'] . "</td>";  // Use uppercase for REF_ID
         echo "</tr>";
     }
     ?>
