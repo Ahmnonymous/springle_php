@@ -15,28 +15,7 @@ session_start();
 </head>
 
 <body style="background-color: #f5f4f4;">
-<?php
-if(isset($_SESSION['auth']))
-{
-?>
-  <div class="container mt-4">
-    <?php
-    if (isset($_SESSION['success_message'])) {
-      $message = $_SESSION['success_message'];
-      echo "<script>
-      Swal.fire({
-        icon: 'success',
-        title: 'Success',
-        text: '$message',
-        customClass: {
-          confirmButton: 'bg-success shadow-none',
-      }
-          })
-            </script>";
-      unset($_SESSION['success_message']);
-      echo "<p>Welcome, " . $_SESSION['username'] . "!</p>";
-    }
-    ?>
+
     <div class="container mt-4">
   <section>
     
@@ -110,12 +89,7 @@ if(isset($_SESSION['auth']))
     </form>
   </section>
 </div>
-<?php }
-else{
-    header("Location:index.php");
-}
 
-?>
 
   </div>
   <!--script src="js/jquery.js"></script-->
