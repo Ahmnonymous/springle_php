@@ -70,16 +70,31 @@ while ($row = oci_fetch_assoc($stid)) {
             <input id="customer_id" name="customer_id" placeholder="Customer ID" class="input-text js-input form-control shadow-none rounded-0" type="text" required>
         </div>
 
+    </div>
+
+    <div class="row">
+
         <div class="form-field col-sm-4 mx-auto">
-            <input id="date" name="date" placeholder="Date" class="input-text js-input form-control shadow-none bg-white rounded-0" type="date">
+            <input id="rate" name="rate" placeholder="Rate" class="input-text js-input form-control shadow-none rounded-0" type="number" required>
         </div>
+
+        <div class="form-field col-sm-4 mx-auto">
+          <input id="quantity" name="quantity" placeholder="Quantity" class="input-text js-input form-control shadow-none rounded-0" type="number" required>
+        </div>
+
     </div>
 
     <div class="row">
         <div class="form-field col-sm-4 mx-auto">
-            <input id="rate" name="rate" placeholder="Rate" class="input-text js-input form-control shadow-none rounded-0" type="number" required>
+          <input id="amount" name="amount" placeholder="Amount" class="input-text js-input form-control shadow-none bg-white rounded-0" type="text" disabled required>
         </div>
-        
+    
+        <div class="form-field col-sm-4 mx-auto">
+          <input id="bot_rec" name="bot_rec" placeholder="Bot Received" class="input-text js-input form-control shadow-none rounded-0" type="number" required>
+        </div>
+    </div>
+
+    <div class="row">
         <div class="form-field col-sm-4 mx-auto">
             <input id="bot_balance" name="bot_balance" placeholder="Bot Balance" class="input-text js-input form-control shadow-none rounded-0" type="number" required>
         </div>
@@ -96,6 +111,13 @@ while ($row = oci_fetch_assoc($stid)) {
         <div class="form-field col-sm-4 mx-auto">
             <input id="mobile" name="mobile" placeholder="Mobile" class="input-text js-input form-control shadow-none" type="text" required>
         </div>
+    </div>
+
+    <div class="row">
+        <div class="form-field col-sm-4 mx-auto">
+            <input id="date" name="date" placeholder="Date" class="input-text js-input form-control shadow-none bg-white rounded-0" type="date">
+        </div>
+    
         <div class="form-field col-sm-4 mx-auto">
             <input id="ref_id" name="ref_id" placeholder="Ref ID" class="input-text js-input form-control shadow-none" type="text" required>
         </div>
