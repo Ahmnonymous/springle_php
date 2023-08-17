@@ -1,43 +1,42 @@
 <?php
 session_start();
-?>
-
-<?php
-
 
 // Database connection details
 $username = 'HR';
 $password = 'HR';
-$db = '124.29.225.97:1521/orcl'; 
+$db = '124.29.225.97:1521/orcl';
 
+// Establish a database connection
 $conn = oci_connect($username, $password, $db);
 if (!$conn) {
     $error = oci_error();
     die("Connection failed: " . $error['message']);
 }
 
+// Retrieve the logged-in user's username
 $user = $_SESSION['username'];
 
-    $sql = "SELECT T.CLAINT_ID, T.NAME, T.rate, T.Bot_bal, T.pay_bal, T.mobile, t.ref_id 
-            FROM DATA_FATCH_VIEW T
-            WHERE T.active = '1' AND t.ref = :user";
+// Define the SQL query
+$sql = "SELECT T.CLAINT_ID, T.NAME, T.rate, T.Bot_bal, T.pay_bal, T.mobile, t.ref_id 
+        FROM DATA_FATCH_VIEW T
+        WHERE T.active = '1' AND t.ref = :user";
 
+// Prepare the SQL statement
 $stid = oci_parse($conn, $sql);
-oci_bind_by_name($stid, ':user', $user);
-
 if (!$stid) {
     $error = oci_error($conn);
     die("Error parsing SQL: " . $error['message']);
 }
 
-oci_execute($stid);
-if (!$stid) {
-    $error = oci_error($conn);
+// Bind the user parameter
+oci_bind_by_name($stid, ':user', $user);
+
+// Execute the statement
+$result = oci_execute($stid);
+if (!$result) {
+    $error = oci_error($stid);
     die("Error executing SQL: " . $error['message']);
 }
-
-$error = oci_error($stid);
-die("Error executing SQL: " . $error['message']);
 
 // Fetch all rows and store in an array
 $dataArray = array();
@@ -45,7 +44,11 @@ while ($row = oci_fetch_assoc($stid)) {
     $dataArray[] = $row;
 }
 
+// Free the statement and close the connection
+oci_free_statement($stid);
+oci_close($conn);
 ?>
+
 
 <!doctype html>
 <html>
