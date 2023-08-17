@@ -31,28 +31,41 @@ if (!$stid) {
 
 ?>
 
-<!-- Echo all fields for debugging purposes -->
-<table border="1">
-    <tr>
-        <th>CLAINT_ID</th>
-        <th>NAME</th>
-        <th>rate</th>
-        <th>Bot_bal</th>
-        <th>pay_bal</th>
-        <th>mobile</th>
-        <th>ref_id</th>
-    </tr>
-    <?php
-    while ($row = oci_fetch_assoc($stid)) {
-        echo "<tr>";
-        echo "<td>" . $row['CLAINT_ID'] . "</td>";
-        echo "<td>" . $row['NAME'] . "</td>";
-        echo "<td>" . $row['RATE'] . "</td>";  // Use uppercase for RATE
-        echo "<td>" . $row['BOT_BAL'] . "</td>";  // Use uppercase for BOT_BAL
-        echo "<td>" . $row['PAY_BAL'] . "</td>";  // Use uppercase for PAY_BAL
-        echo "<td>" . $row['MOBILE'] . "</td>";  // Use uppercase for MOBILE
-        echo "<td>" . $row['REF_ID'] . "</td>";  // Use uppercase for REF_ID
-        echo "</tr>";
-    }
-    ?>
-</table>
+<form method="POST" action="sales_ora.php" class="custom-form mx-auto mb-5 contact-form bg-white p-5 shadow">
+    <h2 class="title text-center"><b>Sale Details</b></h2>
+
+    <div class="form-field col-sm-4 mx-auto">
+        <select id="customer_name" name="customer_name" class="input-text js-input form-control shadow-none rounded-0" required>
+            <option value="" selected disabled>Select Customer Name</option>
+            <?php
+            while ($row = oci_fetch_assoc($stid)) {
+                echo "<option value='" . $row['NAME'] . "'>" . $row['NAME'] . "</option>";
+            }
+            ?>
+        </select>
+    </div>
+
+    <!-- Fields to be populated based on selected customer -->
+    <div class="form-field col-sm-4 mx-auto">
+        <input id="customer_id" name="customer_id" placeholder="Customer ID" class="input-text js-input form-control shadow-none rounded-0" type="text" required>
+    </div>
+    <div class="form-field col-sm-4 mx-auto">
+        <input id="rate" name="rate" placeholder="Rate" class="input-text js-input form-control shadow-none rounded-0" type="number" required>
+    </div>
+    <div class="form-field col-sm-4 mx-auto">
+        <input id="bot_balance" name="bot_balance" placeholder="Bot Balance" class="input-text js-input form-control shadow-none rounded-0" type="number" required>
+    </div>
+    <div class="form-field col-sm-4 mx-auto">
+        <input id="pay_balance" name="pay_balance" placeholder="Pay Balance" class="input-text js-input form-control shadow-none rounded-0" type="number" required>
+    </div>
+    <div class="form-field col-sm-4 mx-auto">
+        <input id="mobile" name="mobile" placeholder="Mobile" class="input-text js-input form-control shadow-none" type="text" required>
+    </div>
+    <div class="form-field col-sm-4 mx-auto">
+        <input id="ref_id" name="ref_id" placeholder="Ref ID" class="input-text js-input form-control shadow-none" type="text" required>
+    </div>
+
+    <div class="form-field col-sm-12 text-center">
+        <input class="submit-btn btn btn-primary" type="submit" value="Save">
+    </div>
+</form>
