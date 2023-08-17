@@ -30,9 +30,9 @@ if (!$conn) {
     die("Connection failed: " . $error['message']);
 }
 
-$sql = "SELECT CLAINT_ID, NAME, rate, Bot_bal, pay_bal, mobile, ref_id FROM DATA_FATCH_VIEW 
-          WHERE active ='1'
-          AND ref = :usernam";
+$sql = "SELECT T.CLAINT_ID, T.NAME, T.rate, T.Bot_bal, T.pay_bal, T.mobile, t.ref_id FROM DATA_FATCH_VIEW T
+          WHERE T.active ='1'
+          AND T.ref = :usernam";
 
 $stid = oci_parse($conn, $sql);
 oci_bind_by_name($stid, ":usernam", $usernam);
@@ -93,26 +93,24 @@ while ($row = oci_fetch_assoc($stid)) {
       <div class="row">
           
           <div class="form-field col-sm-4 mx-auto">
-          <input id="rate" name="rate" placeholder="Rate" class="input-text js-input form-control shadow-none rounded-0" type="number" required
-            value="<?php echo isset($rate) ? $rate : ''; ?>">
+          <input id="rate" name="rate" placeholder="Rate" class="input-text js-input form-control shadow-none rounded-0" type="number" required>
           <!--label class="label" for="rate">Rate</label-->
         </div>
         
         <div class="form-field col-sm-4 mx-auto">
-        <input id="quantity" name="quantity" placeholder="Quantity" class="input-text js-input form-control shadow-none rounded-0" type="number" required>
-        <!--label class="label" for="quantity">Quantity</label-->
+          <input id="quantity" name="quantity" placeholder="Quantity" class="input-text js-input form-control shadow-none rounded-0" type="number" required>
+          <!--label class="label" for="quantity">Quantity</label-->
         </div>
       </div>
       <div class="row">
        <div class="form-field col-sm-4 mx-auto">
-       <input id="bot_rec" name="bot_rec" placeholder="Bot Received" class="input-text js-input form-control shadow-none rounded-0" type="number" required>
+          <input id="bot_rec" name="bot_rec" placeholder="Bot Received" class="input-text js-input form-control shadow-none rounded-0" type="number" required>
           <!--label class="label" for="BotRecord">Bot Record</label-->
         </div>
         
         <div class="form-field col-sm-4 mx-auto">
-        <input id="bottle_balance" name="bottle_balance" placeholder="Bot Balance" class="input-text js-input form-control shadow-none rounded-0" type="number" required
-            value="<?php echo isset($bottle_balance) ? $bottle_balance : ''; ?>">
-        <!--label class="label" for="bottle_balance">Bot Balance</label-->
+          <input id="bottle_balance" name="bottle_balance" placeholder="Bot Balance" class="input-text js-input form-control shadow-none rounded-0" type="number" required>
+          <!--label class="label" for="bottle_balance">Bot Balance</label-->
         </div>
       </div>
       <div class="row">
