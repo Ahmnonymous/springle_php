@@ -36,6 +36,9 @@ if (!$stid) {
     die("Error executing SQL: " . $error['message']);
 }
 
+$error = oci_error($stid);
+die("Error executing SQL: " . $error['message']);
+
 // Fetch all rows and store in an array
 $dataArray = array();
 while ($row = oci_fetch_assoc($stid)) {
