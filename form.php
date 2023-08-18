@@ -163,7 +163,7 @@ if(isset($_SESSION['auth']))
         </div>
         <div class="form-field col-sm-4 mx-auto">
         <p>Contact No.</p>
-            <input id="contact" name="contact" class="input-text js-input form-control shadow-none" type="text" readonly  value="0">
+            <input id="contact" name="contact" class="input-text js-input form-control shadow-none" type="text" readonly>
         </div>
     </div>
 
