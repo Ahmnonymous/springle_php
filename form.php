@@ -101,7 +101,7 @@ if(isset($_SESSION['auth']))
             <p>Customer Name</p>
         <!--label class="label" for="customer_name">Customer Name</label-->
             <select id="customer_name" name="customer_name" class="input-text js-input form-control shadow-none rounded-0" required>
-                <option value="" selected disabled>Select Customer Name</option>
+                <option value="" selected readonly>Select Customer Name</option>
                 <?php
                 foreach ($dataArray as $row) {
                     echo "<option value='" . $row['NAME'] . "'>" . $row['NAME'] . "</option>";
@@ -112,7 +112,7 @@ if(isset($_SESSION['auth']))
         
     <div class="form-field col-sm-4 mx-auto">
     <p>Customer ID</p>
-        <input id="customer_id" name="customer_id"  class="input-text js-input form-control shadow-none rounded-0" type="text" disabled required>
+        <input id="customer_id" name="customer_id"  class="input-text js-input form-control shadow-none rounded-0" type="text" readonly required>
     </div>
 
     </div>
@@ -121,7 +121,7 @@ if(isset($_SESSION['auth']))
 
         <div class="form-field col-sm-4 mx-auto">
         <p>Rate</p>
-        <input id="rate" name="rate" class="input-text js-input form-control shadow-none rounded-0" type="number" step="0.01" disabled required>
+        <input id="rate" name="rate" class="input-text js-input form-control shadow-none rounded-0" type="number" step="0.01" readonly required>
         </div>
 
 
@@ -135,7 +135,7 @@ if(isset($_SESSION['auth']))
     <div class="row">
         <div class="form-field col-sm-4 mx-auto">
         <p>Amount</p>
-          <input id="amount" name="amount" class="input-text js-input form-control shadow-none bg-white rounded-0" type="text" disabled required>
+          <input id="amount" name="amount" class="input-text js-input form-control shadow-none bg-white rounded-0" type="text" readonly required>
         </div>
     
         <div class="form-field col-sm-4 mx-auto">
@@ -147,7 +147,7 @@ if(isset($_SESSION['auth']))
     <div class="row">
         <div class="form-field col-sm-4 mx-auto">
         <p>Bottle Balance</p>
-            <input id="bot_balance" name="bot_balance"  class="input-text js-input form-control shadow-none rounded-0" type="number" disabled required>
+            <input id="bot_balance" name="bot_balance"  class="input-text js-input form-control shadow-none rounded-0" type="number" readonly required>
         </div>
         <div class="form-field col-sm-4 mx-auto">
         <p>Payment Received</p>
@@ -159,24 +159,24 @@ if(isset($_SESSION['auth']))
     <div class="row">
         <div class="form-field col-sm-4 mx-auto">
         <p>Payment Balance</p>
-                <input id="pay_balance" name="pay_balance"  class="input-text js-input form-control shadow-none rounded-0" type="number" disabled required>
+                <input id="pay_balance" name="pay_balance"  class="input-text js-input form-control shadow-none rounded-0" type="number" readonly required>
         </div>
         <div class="form-field col-sm-4 mx-auto">
         <p>Contact No.</p>
-            <input id="contact" name="contact" class="input-text js-input form-control shadow-none" type="text" disabled required>
+            <input id="contact" name="contact" class="input-text js-input form-control shadow-none" type="text" readonly>
         </div>
     </div>
 
     <div class="row">
         <div class="form-field col-sm-4 mx-auto">
         <p>Date</p>
-        <input id="date" name="date" class="input-text js-input form-control shadow-none bg-white rounded-0" type="date" disabled required >
+        <input id="date" name="date" class="input-text js-input form-control shadow-none bg-white rounded-0" type="date" readonly required >
         </div>
 
     
         <div class="form-field col-sm-4 mx-auto">
         <p>Reference ID</p>
-        <input id="ref_id" name="ref_id"  class="input-text js-input form-control shadow-none" type="text" disabled required>
+        <input id="ref_id" name="ref_id"  class="input-text js-input form-control shadow-none" type="text" readonly required>
         </div>
     </div>
 
