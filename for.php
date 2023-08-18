@@ -101,7 +101,7 @@ if(isset($_SESSION['auth']))
             <p>Customer Name</p>
         <!--label class="label" for="customer_name">Customer Name</label-->
             <select id="customer_name" name="customer_name" class="input-text js-input form-control shadow-none rounded-0" required>
-                <option value="" selected disabled></option>
+                <option value="" selected disabled>Select Customer Name</option>
                 <?php
                 foreach ($dataArray as $row) {
                     echo "<option value='" . $row['NAME'] . "'>" . $row['NAME'] . "</option>";
@@ -121,7 +121,7 @@ if(isset($_SESSION['auth']))
 
         <div class="form-field col-sm-4 mx-auto">
         <p>Rate</p>
-            <input id="rate" name="rate"  class="input-text js-input form-control shadow-none rounded-0" type="number" required>
+            <input id="rate" name="rate"  class="input-text js-input form-control shadow-none rounded-0" type="number" disabled required>
         </div>
 
         <div class="form-field col-sm-4 mx-auto">
@@ -158,23 +158,24 @@ if(isset($_SESSION['auth']))
     <div class="row">
         <div class="form-field col-sm-4 mx-auto">
         <p>Payment Balance</p>
-                <input id="pay_balance" name="pay_balance"  class="input-text js-input form-control shadow-none rounded-0" type="number"disabled required>
+                <input id="pay_balance" name="pay_balance"  class="input-text js-input form-control shadow-none rounded-0" type="number" disabled required>
         </div>
         <div class="form-field col-sm-4 mx-auto">
         <p>Contact No.</p>
-            <input id="contact" name="contact" class="input-text js-input form-control shadow-none" type="text" required>
+            <input id="contact" name="contact" class="input-text js-input form-control shadow-none" type="text" disabled required>
         </div>
     </div>
 
     <div class="row">
         <div class="form-field col-sm-4 mx-auto">
         <p>Date</p>
-            <input id="date" name="date" class="input-text js-input form-control shadow-none bg-white rounded-0" type="date">
+        <input id="date" name="date" class="input-text js-input form-control shadow-none bg-white rounded-0" type="date" required disabled>
         </div>
+
     
         <div class="form-field col-sm-4 mx-auto">
         <p>Reference ID</p>
-        <input id="ref_id" name="ref_id"  class="input-text js-input form-control shadow-none" type="text" required>
+        <input id="ref_id" name="ref_id"  class="input-text js-input form-control shadow-none" type="text" disabled required>
         </div>
     </div>
 
@@ -195,6 +196,19 @@ if(isset($_SESSION['auth']))
 
 <script src="js/jquery.js"></script>
   <script src="js/jquery-ui.js"></script>
+  <script>
+    $(document).ready(function() {
+    // Set the current date in the date field
+    var currentDate = new Date();
+    var year = currentDate.getFullYear();
+    var month = (currentDate.getMonth() + 1).toString().padStart(2, '0');
+    var day = currentDate.getDate().toString().padStart(2, '0');
+    var formattedDate = year + '-' + month + '-' + day;
+
+    $('#date').val(formattedDate);
+});
+
+  </script>
 <script>
     document.getElementById('customer_name').addEventListener('change', function() {
     var selectedName = this.value;
