@@ -140,7 +140,7 @@ if(isset($_SESSION['auth']))
         
     <div class="form-field col-sm-4 mx-auto">
     <label class="label" for="customer_id">Customer ID</label>
-        <input id="customer_id" name="customer_id" class="input-text js-input form-control shadow-none rounded-0" type="text" required>
+        <input id="customer_id" name="customer_id" class="input-text js-input form-control shadow-none rounded-0" type="text" disabled required>
     </div>
 
     </div>
@@ -174,7 +174,7 @@ if(isset($_SESSION['auth']))
     <div class="row">
         <div class="form-field col-sm-4 mx-auto">
         <label class="label" for="bot_balance">Bottle Balance</label>
-            <input id="bot_balance" name="bot_balance" class="input-text js-input form-control shadow-none rounded-0" type="number" required>
+            <input id="bot_balance" name="bot_balance" class="input-text js-input form-control shadow-none rounded-0" type="number" disabled required>
         </div>
         <div class="form-field col-sm-4 mx-auto">
         <label class="label" for="pay_received">Payment Received</label>
@@ -186,7 +186,7 @@ if(isset($_SESSION['auth']))
     <div class="row">
         <div class="form-field col-sm-4 mx-auto">
         <label class="label" for="pay_balance">Payment Balance</label>
-                <input id="pay_balance" name="pay_balance" class="input-text js-input form-control shadow-none rounded-0" type="number" required>
+                <input id="pay_balance" name="pay_balance" class="input-text js-input form-control shadow-none rounded-0" type="number"disabled required>
         </div>
         <div class="form-field col-sm-4 mx-auto">
         <label class="label" for="contact">Mobile</label>
