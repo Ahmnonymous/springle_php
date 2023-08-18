@@ -127,6 +127,7 @@ if(isset($_SESSION['auth']))
 
     <div class="row">
         <div class="form-field col-sm-4 mx-auto">
+        <label class="label" for="customer_name">Customer Name</label>
             <select id="customer_name" name="customer_name" class="input-text js-input form-control shadow-none rounded-0" required>
                 <option value="" selected disabled>Select Customer Name</option>
                 <?php
@@ -138,8 +139,8 @@ if(isset($_SESSION['auth']))
         </div>
         
     <div class="form-field col-sm-4 mx-auto">
+    <label class="label" for="customer_id">Customer ID</label>
         <input id="customer_id" name="customer_id" class="input-text js-input form-control shadow-none rounded-0" type="text" required>
-        <label class="label" for="customer_id">Customer ID</label>
     </div>
 
     </div>
@@ -147,51 +148,61 @@ if(isset($_SESSION['auth']))
     <div class="row">
 
         <div class="form-field col-sm-4 mx-auto">
-            <input id="rate" name="rate" placeholder="Rate" class="input-text js-input form-control shadow-none rounded-0" type="number" required>
+        <label class="label" for="rate">Rate</label>
+            <input id="rate" name="rate" class="input-text js-input form-control shadow-none rounded-0" type="number" required>
         </div>
 
         <div class="form-field col-sm-4 mx-auto">
-          <input id="quantity" name="quantity" placeholder="Quantity" class="input-text js-input form-control shadow-none rounded-0" type="number" required>
+        <label class="label" for="quantity">Quantity</label>
+          <input id="quantity" name="quantity" class="input-text js-input form-control shadow-none rounded-0" type="number" required>
         </div>
 
     </div>
 
     <div class="row">
         <div class="form-field col-sm-4 mx-auto">
-          <input id="amount" name="amount" placeholder="Amount" class="input-text js-input form-control shadow-none bg-white rounded-0" type="text" disabled required>
+        <label class="label" for="amount">Amount</label>
+          <input id="amount" name="amount" class="input-text js-input form-control shadow-none bg-white rounded-0" type="text" disabled required>
         </div>
     
         <div class="form-field col-sm-4 mx-auto">
-          <input id="bot_rec" name="bot_rec" placeholder="Bot Received" class="input-text js-input form-control shadow-none rounded-0" type="number" required>
+        <label class="label" for="bot_rec">Bottle Received</label>
+          <input id="bot_rec" name="bot_rec" class="input-text js-input form-control shadow-none rounded-0" type="number" required>
         </div>
     </div>
 
     <div class="row">
         <div class="form-field col-sm-4 mx-auto">
-            <input id="bot_balance" name="bot_balance" placeholder="Bot Balance" class="input-text js-input form-control shadow-none rounded-0" type="number" required>
+        <label class="label" for="bot_balance">Bottle Balance</label>
+            <input id="bot_balance" name="bot_balance" class="input-text js-input form-control shadow-none rounded-0" type="number" required>
         </div>
         <div class="form-field col-sm-4 mx-auto">
-          <input id="pay_received" name="pay_received" placeholder="Payment Received" class="input-text js-input form-control shadow-none" type="number" required>
+        <label class="label" for="pay_received">Payment Received</label>
+          <input id="pay_received" name="pay_received"  class="input-text js-input form-control shadow-none" type="number" required>
         </div>
 
     </div>
 
     <div class="row">
         <div class="form-field col-sm-4 mx-auto">
-                <input id="pay_balance" name="pay_balance" placeholder="Pay Balance" class="input-text js-input form-control shadow-none rounded-0" type="number" required>
+        <label class="label" for="pay_balance">Payment Balance</label>
+                <input id="pay_balance" name="pay_balance" class="input-text js-input form-control shadow-none rounded-0" type="number" required>
         </div>
         <div class="form-field col-sm-4 mx-auto">
-            <input id="contact" name="contact" placeholder="Mobile" class="input-text js-input form-control shadow-none" type="text" required>
+        <label class="label" for="contact">Mobile</label>
+            <input id="contact" name="contact" class="input-text js-input form-control shadow-none" type="text" required>
         </div>
     </div>
 
     <div class="row">
         <div class="form-field col-sm-4 mx-auto">
-            <input id="date" name="date" placeholder="Date" class="input-text js-input form-control shadow-none bg-white rounded-0" type="date">
+        <label class="label" for="date">Date</label>
+            <input id="date" name="date" class="input-text js-input form-control shadow-none bg-white rounded-0" type="date">
         </div>
     
         <div class="form-field col-sm-4 mx-auto">
-        <input id="ref_id" name="ref_id" placeholder="Reference ID" class="input-text js-input form-control shadow-none" type="text" required>
+        <label class="label" for="ref_id">Reference ID</label>
+        <input id="ref_id" name="ref_id" class="input-text js-input form-control shadow-none" type="text" required>
         </div>
     </div>
 
