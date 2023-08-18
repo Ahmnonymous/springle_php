@@ -213,23 +213,27 @@ if(isset($_SESSION['auth']))
 <script src="js/jquery.js"></script>
   <script src="js/jquery-ui.js"></script>
 <script>
-    // Event listener for the customer name dropdown
     document.getElementById('customer_name').addEventListener('change', function() {
-        var selectedName = this.value;
+    var selectedName = this.value;
 
-        var dataArray = <?php echo json_encode($dataArray); ?>;
-        for (var i = 0; i < dataArray.length; i++) {
-            if (dataArray[i]['NAME'] === selectedName) {
-                document.getElementById('customer_id').value = dataArray[i]['CLAINT_ID'];
-                document.getElementById('rate').value = dataArray[i]['RATE'];
-                document.getElementById('bot_balance').value = dataArray[i]['BOT_BAL'];
-                document.getElementById('pay_balance').value = dataArray[i]['PAY_BAL'];
-                document.getElementById('contact').value = dataArray[i]['MOBILE'];
-                document.getElementById('ref_id').value = dataArray[i]['REF_ID'];
-                break;
-            }
+    var dataArray = <?php echo json_encode($dataArray); ?>;
+    for (var i = 0; i < dataArray.length; i++) {
+        if (dataArray[i]['NAME'] === selectedName) {
+            document.getElementById('customer_id').value = dataArray[i]['CLAINT_ID'];
+            document.getElementById('rate').value = dataArray[i]['RATE'];
+            document.getElementById('bot_balance').value = dataArray[i]['BOT_BAL'];
+            document.getElementById('pay_balance').value = dataArray[i]['PAY_BAL'];
+            document.getElementById('contact').value = dataArray[i]['MOBILE'];
+            document.getElementById('ref_id').value = dataArray[i]['REF_ID'];
+
+            // Add the not-empty class to the populated fields
+            $('#customer_id, #rate, #bot_balance, #pay_balance, #contact, #ref_id').addClass('not-empty');
+            
+            break;
         }
-    });
+    }
+});
+
 </script>
 <script>
     $('.js-input').keyup(function() {
