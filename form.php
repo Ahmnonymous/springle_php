@@ -120,51 +120,52 @@ if(isset($_SESSION['auth']))
     <div class="row">
 
         <div class="form-field col-sm-4 mx-auto">
-        <p>Rate</p>
-        <input id="rate" name="rate" class="input-text js-input form-control shadow-none rounded-0" type="number" step="0.01" readonly required>
-        </div>
-
-
-        <div class="form-field col-sm-4 mx-auto">
         <p>Quantity</p>
           <input id="quantity" name="quantity" class="input-text js-input form-control shadow-none rounded-0" type="number" required>
         </div>
 
+        <div class="form-field col-sm-4 mx-auto">
+        <p>Rate</p>
+        <input id="rate" name="rate" class="input-text js-input form-control shadow-none rounded-0" type="number" step="0.01" readonly required>
+        </div>
+
     </div>
 
     <div class="row">
-        <div class="form-field col-sm-4 mx-auto">
+    <div class="form-field col-sm-4 mx-auto">
+        <p>Contact No.</p>
+            <input id="contact" name="contact" class="input-text js-input form-control shadow-none" type="text" readonly>
+        </div>
+
+        <div class="form-field col-sm-4 mx-auto"> 
         <p>Amount</p>
           <input id="amount" name="amount" class="input-text js-input form-control shadow-none bg-white rounded-0" type="text" readonly required>
         </div>
     
-        <div class="form-field col-sm-4 mx-auto">
-        <p>Bottle Received</p>
-          <input id="bot_rec" name="bot_rec" class="input-text js-input form-control shadow-none rounded-0" type="number" required>
-        </div>
     </div>
 
     <div class="row">
+    <div class="form-field col-sm-4 mx-auto">
+        <p>Bottle Received</p>
+          <input id="bot_rec" name="bot_rec" class="input-text js-input form-control shadow-none rounded-0" type="number" required>
+        </div>
         <div class="form-field col-sm-4 mx-auto">
         <p>Bottle Balance</p>
             <input id="bot_balance" name="bot_balance"  class="input-text js-input form-control shadow-none rounded-0" type="number" readonly required>
         </div>
-        <div class="form-field col-sm-4 mx-auto">
-        <p>Payment Received</p>
-          <input id="pay_received" name="pay_received"  class="input-text js-input form-control shadow-none" type="number" required>
-        </div>
 
     </div>
 
     <div class="row">
+    <div class="form-field col-sm-4 mx-auto">
+        <p>Payment Received</p>
+          <input id="pay_received" name="pay_received"  class="input-text js-input form-control shadow-none" type="number" required>
+        </div>
         <div class="form-field col-sm-4 mx-auto">
         <p>Payment Balance</p>
                 <input id="pay_balance" name="pay_balance"  class="input-text js-input form-control shadow-none rounded-0" type="number" readonly required>
         </div>
-        <div class="form-field col-sm-4 mx-auto">
-        <p>Contact No.</p>
-            <input id="contact" name="contact" class="input-text js-input form-control shadow-none" type="text" readonly>
-        </div>
+
     </div>
 
     <div class="row">
@@ -172,7 +173,6 @@ if(isset($_SESSION['auth']))
         <p>Date</p>
         <input id="date" name="date" class="input-text js-input form-control shadow-none bg-white rounded-0" type="date" readonly required >
         </div>
-
     
         <div class="form-field col-sm-4 mx-auto">
         <p>Reference ID</p>
