@@ -108,6 +108,7 @@ if(isset($_SESSION['auth']))
         
         <div class="form-field col-sm-4 mx-auto">
             <input id="customer_id" name="customer_id" placeholder="Customer ID" class="input-text js-input form-control shadow-none rounded-0" type="text" required>
+            <label class="label" for="customer_id">Customer ID</label-->
         </div>
 
     </div>
