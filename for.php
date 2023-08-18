@@ -128,7 +128,7 @@ if(isset($_SESSION['auth']))
     <div class="row">
         <div class="form-field col-sm-4 mx-auto">
             <p>Customer Name</p>
-        <label class="label" for="customer_name">Customer Name</label>
+        <!--label class="label" for="customer_name">Customer Name</label-->
             <select id="customer_name" name="customer_name" class="input-text js-input form-control shadow-none rounded-0" required>
                 <option value="" selected disabled>Select Customer Name</option>
                 <?php
