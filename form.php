@@ -61,13 +61,7 @@ oci_close($conn);
   <link rel="stylesheet" href="css/fstyle.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/11.4.24/sweetalert2.all.js"></script>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-<style>
-  .disabled-field {
-  background-color: #e9ecef;
-  cursor: not-allowed;
-  opacity: 1;
-}
-</style>
+
 </head>
 
 
@@ -141,9 +135,8 @@ if(isset($_SESSION['auth']))
     <div class="row">
         <div class="form-field col-sm-4 mx-auto">
         <p>Amount</p>
-        <input id="amount" name="amount" class="input-text js-input form-control shadow-none bg-white rounded-0 disabled-field" type="text" disabled required>
+          <input id="amount" name="amount" class="input-text js-input form-control shadow-none bg-white rounded-0" type="text" disabled required>
         </div>
-
     
         <div class="form-field col-sm-4 mx-auto">
         <p>Bottle Received</p>
@@ -177,9 +170,10 @@ if(isset($_SESSION['auth']))
     <div class="row">
         <div class="form-field col-sm-4 mx-auto">
         <p>Date</p>
-        <input id="date" name="date" class="input-text js-input form-control shadow-none bg-white rounded-0 disabled-field" type="date" disabled required>
+        <input id="date" name="date" class="input-text js-input form-control shadow-none bg-white rounded-0" type="date" disabled required >
         </div>
 
+    
         <div class="form-field col-sm-4 mx-auto">
         <p>Reference ID</p>
         <input id="ref_id" name="ref_id"  class="input-text js-input form-control shadow-none" type="text" disabled required>
