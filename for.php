@@ -111,8 +111,8 @@ if(isset($_SESSION['auth']))
         </div>
         
     <div class="form-field col-sm-4 mx-auto">
-    <label class="label" for="customer_id">Customer ID</label>
-        <input id="customer_id" name="customer_id" placeholder=" " class="input-text js-input form-control shadow-none rounded-0" type="text" disabled required>
+    <p>Customer ID</p>
+        <input id="customer_id" name="customer_id"  class="input-text js-input form-control shadow-none rounded-0" type="text" disabled required>
     </div>
 
     </div>
@@ -120,12 +120,12 @@ if(isset($_SESSION['auth']))
     <div class="row">
 
         <div class="form-field col-sm-4 mx-auto">
-        <label class="label" for="rate">Rate</label>
-            <input id="rate" name="rate" placeholder=" " class="input-text js-input form-control shadow-none rounded-0" type="number" required>
+        <p>Rate</p>
+            <input id="rate" name="rate"  class="input-text js-input form-control shadow-none rounded-0" type="number" required>
         </div>
 
         <div class="form-field col-sm-4 mx-auto">
-        <label class="label" for="quantity">Quantity</label>
+        <p>Quantity</p>
           <input id="quantity" name="quantity" class="input-text js-input form-control shadow-none rounded-0" type="number" required>
         </div>
 
@@ -133,23 +133,23 @@ if(isset($_SESSION['auth']))
 
     <div class="row">
         <div class="form-field col-sm-4 mx-auto">
-        <label class="label" for="amount">Amount</label>
+        <p>Amount</p>
           <input id="amount" name="amount" class="input-text js-input form-control shadow-none bg-white rounded-0" type="text" disabled required>
         </div>
     
         <div class="form-field col-sm-4 mx-auto">
-        <label class="label" for="bot_rec">Bottle Received</label>
+        <p>Bottle Received</p>
           <input id="bot_rec" name="bot_rec" class="input-text js-input form-control shadow-none rounded-0" type="number" required>
         </div>
     </div>
 
     <div class="row">
         <div class="form-field col-sm-4 mx-auto">
-        <label class="label" for="bot_balance">Bottle Balance</label>
-            <input id="bot_balance" name="bot_balance" placeholder=" " class="input-text js-input form-control shadow-none rounded-0" type="number" disabled required>
+        <p>Bottle Balance</p>
+            <input id="bot_balance" name="bot_balance"  class="input-text js-input form-control shadow-none rounded-0" type="number" disabled required>
         </div>
         <div class="form-field col-sm-4 mx-auto">
-        <label class="label" for="pay_received">Payment Received</label>
+        <p>Payment Received</p>
           <input id="pay_received" name="pay_received"  class="input-text js-input form-control shadow-none" type="number" required>
         </div>
 
@@ -157,24 +157,24 @@ if(isset($_SESSION['auth']))
 
     <div class="row">
         <div class="form-field col-sm-4 mx-auto">
-        <label class="label" for="pay_balance">Payment Balance</label>
-                <input id="pay_balance" name="pay_balance" placeholder=" " class="input-text js-input form-control shadow-none rounded-0" type="number"disabled required>
+        <p>Payment Balance</p>
+                <input id="pay_balance" name="pay_balance"  class="input-text js-input form-control shadow-none rounded-0" type="number"disabled required>
         </div>
         <div class="form-field col-sm-4 mx-auto">
-        <label class="label" for="contact">Mobile</label>
+        <p>Contact No.</p>
             <input id="contact" name="contact" class="input-text js-input form-control shadow-none" type="text" required>
         </div>
     </div>
 
     <div class="row">
         <div class="form-field col-sm-4 mx-auto">
-        <label class="label" for="date">Date</label>
+        <p>Date</p>
             <input id="date" name="date" class="input-text js-input form-control shadow-none bg-white rounded-0" type="date">
         </div>
     
         <div class="form-field col-sm-4 mx-auto">
-        <label class="label" for="ref_id">Reference ID</label>
-        <input id="ref_id" name="ref_id" placeholder=" " class="input-text js-input form-control shadow-none" type="text" required>
+        <p>Reference ID</p>
+        <input id="ref_id" name="ref_id"  class="input-text js-input form-control shadow-none" type="text" required>
         </div>
     </div>
 
