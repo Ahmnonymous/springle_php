@@ -61,35 +61,6 @@ oci_close($conn);
   <link rel="stylesheet" href="css/fstyle.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/11.4.24/sweetalert2.all.js"></script>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-  <style>
-  .form-field {
-    position: relative;
-    margin-bottom: 20px;
-  }
-
-  .label {
-    position: absolute;
-    top: 0;
-    left: 0;
-    pointer-events: none;
-    transition: 0.2s ease all;
-  }
-
-  .input-text {
-    padding: 10px;
-    width: 100%;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-  }
-
-  .input-text:focus + .label,
-  .input-text.not-empty + .label {
-    top: -20px;
-    font-size: 12px;
-    color: #007bff;
-  }
-</style>
-
 
 </head>
 
@@ -130,7 +101,7 @@ if(isset($_SESSION['auth']))
             <p>Customer Name</p>
         <!--label class="label" for="customer_name">Customer Name</label-->
             <select id="customer_name" name="customer_name" class="input-text js-input form-control shadow-none rounded-0" required>
-                <option value="" selected disabled>Select Customer Name</option>
+                <option value="" selected disabled></option>
                 <?php
                 foreach ($dataArray as $row) {
                     echo "<option value='" . $row['NAME'] . "'>" . $row['NAME'] . "</option>";
