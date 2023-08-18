@@ -61,7 +61,13 @@ oci_close($conn);
   <link rel="stylesheet" href="css/fstyle.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/11.4.24/sweetalert2.all.js"></script>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-
+<style>
+  .disabled-field {
+  background-color: #e9ecef;
+  cursor: not-allowed;
+  opacity: 1;
+}
+</style>
 </head>
 
 
