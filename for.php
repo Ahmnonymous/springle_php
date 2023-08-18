@@ -121,8 +121,9 @@ if(isset($_SESSION['auth']))
 
         <div class="form-field col-sm-4 mx-auto">
         <p>Rate</p>
-            <input id="rate" name="rate"  class="input-text js-input form-control shadow-none rounded-0" type="number" disabled required>
+        <input id="rate" name="rate" class="input-text js-input form-control shadow-none rounded-0" type="number" step="0.01" disabled required>
         </div>
+
 
         <div class="form-field col-sm-4 mx-auto">
         <p>Quantity</p>
@@ -169,7 +170,7 @@ if(isset($_SESSION['auth']))
     <div class="row">
         <div class="form-field col-sm-4 mx-auto">
         <p>Date</p>
-        <input id="date" name="date" class="input-text js-input form-control shadow-none bg-white rounded-0" type="date" required disabled>
+        <input id="date" name="date" class="input-text js-input form-control shadow-none bg-white rounded-0" type="date" disabled required >
         </div>
 
     
@@ -217,7 +218,9 @@ if(isset($_SESSION['auth']))
     for (var i = 0; i < dataArray.length; i++) {
         if (dataArray[i]['NAME'] === selectedName) {
             document.getElementById('customer_id').value = dataArray[i]['CLAINT_ID'];
-            document.getElementById('rate').value = dataArray[i]['RATE'];
+            var rateField = $('#rate');
+            rateField.val(dataArray[i]['RATE'].toFixed(2));
+            rateField.addClass('not-empty');
             document.getElementById('bot_balance').value = dataArray[i]['BOT_BAL'];
             document.getElementById('pay_balance').value = dataArray[i]['PAY_BAL'];
             document.getElementById('contact').value = dataArray[i]['MOBILE'];
