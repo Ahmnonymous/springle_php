@@ -135,8 +135,9 @@ if(isset($_SESSION['auth']))
     <div class="row">
         <div class="form-field col-sm-4 mx-auto">
         <p>Amount</p>
-          <input id="amount" name="amount" class="input-text js-input form-control shadow-none bg-white rounded-0" type="text" disabled required>
+        <input id="amount" name="amount" class="input-text js-input form-control shadow-none bg-white rounded-0 disabled-field" type="text" disabled required>
         </div>
+
     
         <div class="form-field col-sm-4 mx-auto">
         <p>Bottle Received</p>
@@ -170,10 +171,9 @@ if(isset($_SESSION['auth']))
     <div class="row">
         <div class="form-field col-sm-4 mx-auto">
         <p>Date</p>
-        <input id="date" name="date" class="input-text js-input form-control shadow-none bg-white rounded-0" type="date" disabled required >
+        <input id="date" name="date" class="input-text js-input form-control shadow-none bg-white rounded-0 disabled-field" type="date" disabled required>
         </div>
 
-    
         <div class="form-field col-sm-4 mx-auto">
         <p>Reference ID</p>
         <input id="ref_id" name="ref_id"  class="input-text js-input form-control shadow-none" type="text" disabled required>
