@@ -4,7 +4,7 @@ session_start();
 // Database connection details
 $user = 'HR';
 $password = 'HR';
-$db = '124.29.225.97:1521/orcl';
+$db = '154.57.216.164:1521/orcl'; 
 
 // Establish a database connection
 $conn = oci_connect($user, $password, $db);
